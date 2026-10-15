@@ -8,12 +8,12 @@
     <language>en-gb</language>
     <lastBuildDate>Thu, 15 Oct 2026 12:00:00 +0000</lastBuildDate>
     <item>
-      <title>Giant Reseller Phone System addon 3.1.2</title>
-      <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.4.zip</link>
-      <guid isPermaLink="false">resellervoip-3.1.2</guid>
+      <title>Giant Reseller Phone System addon 3.2.1</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.4.zip</link>
+      <guid isPermaLink="false">resellervoip-3.2.1</guid>
       <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
-      <description>&lt;ul&gt;&lt;li&gt;Checkout: the number search reads the endpoint&amp;#039;s answer whether or not the browser already parsed it, and when the search is refused or fails it says why in the number panel instead of silently showing nothing&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
-      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.4.zip" length="1780609" type="application/zip"/>
+      <description>&lt;ul&gt;&lt;li&gt;Fixes the service page&amp;#039;s script (broken in 3.2.0 by the tax-wording change) and the port form&amp;#039;s remaining &amp;quot;ex. VAT&amp;quot;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.4.zip" length="1789141" type="application/zip"/>
     </item>
     <item>
       <title>Giant API: UK VoIP Reseller Provisioning &amp; Addon Module 2.0.1</title>
