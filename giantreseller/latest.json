@@ -1,16 +1,18 @@
 {
     "module": "giantreseller",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "released": "2026-10-15",
     "notes": [
-        "Audit trail: every order, suspension, upgrade, payment, import and customer change, with who did it, when and how it went",
-        "Audit trail tab with filters and CSV download, and the latest entries on each service's module tab",
-        "Release zips now open in Windows (they were tar files with a .zip name)"
+        "New broadband page for your customers: online status, IP address, speed, 30-day uptime, daily usage chart, recent connections and why they ended",
+        "Router details, Wi-Fi networks and connected devices for managed routers",
+        "Line checks your customers can run themselves, with results in plain words",
+        "Optional customer actions, each with its own tick box: reconnect, line test, line checks, change Wi-Fi, change content filter",
+        "Matches your WHMCS theme's colours (Twenty-One and Six)"
     ],
     "php": [
         "7.4",
         "8.1",
         "8.2"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php{php}.zip"
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php{php}.zip"
 }
