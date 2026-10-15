@@ -8,12 +8,28 @@
     <language>en-gb</language>
     <lastBuildDate>Thu, 15 Oct 2026 12:00:00 +0000</lastBuildDate>
     <item>
+      <title>Giant Reseller Phone System addon 3.2.4</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.4.zip</link>
+      <guid isPermaLink="false">resellervoip-3.2.4</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;The phone-system pages (the service page, Port a number, 999 records, the estate, the services list) carry their own colour palette, so they look right on any WHMCS theme; before, their styles read colour variables only Giant&amp;#039;s own theme defined, leaving them unstyled on a reseller&amp;#039;s site&lt;/li&gt;&lt;li&gt;New setting &amp;quot;Accent colour&amp;quot;: a hex colour for buttons, tiles and highlights on those pages and at checkout; blank keeps the default blue&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.4.zip" length="1829415" type="application/zip"/>
+    </item>
+    <item>
+      <title>Giant Reseller Phone System addon 3.2.3</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.4.zip</link>
+      <guid isPermaLink="false">resellervoip-3.2.3</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Guide tab: common problems and their fixes (ionCube Loader, missing number picker, tax wording, call charges, the module log); the full list is in the setup guide&amp;#039;s Troubleshooting chapter&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.4.zip" length="1824566" type="application/zip"/>
+    </item>
+    <item>
       <title>Giant Reseller Phone System addon 3.2.2</title>
       <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip</link>
       <guid isPermaLink="false">resellervoip-3.2.2</guid>
       <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
       <description>&lt;ul&gt;&lt;li&gt;Checkout: three or more number tiles per row; the number-type and area-code filters are stacked full width with controls of one height; the active filter pill&amp;#039;s label is always readable&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
-      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip" length="1789852" type="application/zip"/>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip" length="1789569" type="application/zip"/>
     </item>
     <item>
       <title>Giant Reseller Phone System addon 3.2.1</title>
