@@ -1,18 +1,178 @@
 {
     "module": "giantreseller",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "released": "2026-10-15",
     "notes": [
-        "New broadband page for your customers: online status, IP address, speed, 30-day uptime, daily usage chart, recent connections and why they ended",
-        "Router details, Wi-Fi networks and connected devices for managed routers",
-        "Line checks your customers can run themselves, with results in plain words",
-        "Optional customer actions, each with its own tick box: reconnect, line test, line checks, change Wi-Fi, change content filter",
-        "Matches your WHMCS theme's colours (Twenty-One and Six)"
+        "Releases for PHP 8.3 and 8.4, alongside 7.4, 8.1 and 8.2",
+        "Release history and an RSS feed of every release, for your own download pages"
     ],
     "php": [
         "7.4",
         "8.1",
-        "8.2"
+        "8.2",
+        "8.3",
+        "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php{php}.zip"
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php{php}.zip",
+    "feed": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/releases.xml",
+    "releases": [
+        {
+            "version": "2.2.1",
+            "released": "2026-10-15",
+            "notes": [
+                "Releases for PHP 8.3 and 8.4, alongside 7.4, 8.1 and 8.2",
+                "Release history and an RSS feed of every release, for your own download pages"
+            ],
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2",
+                "8.3",
+                "8.4"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php7.4.zip",
+                    "size": 1064584,
+                    "sha256": "bd478f62078edbbcdf39264811a71af1c784f6930de42a40536366371c644dc6"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.1.zip",
+                    "size": 1052519,
+                    "sha256": "f70d2d043c424af35c20948d5fe67adde965d68203449e36952312719246f9d2"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.2.zip",
+                    "size": 1054494,
+                    "sha256": "e4ef462bd4d787af10cf47407a232f962048c40999ce2f5f939869ac62735b91"
+                },
+                {
+                    "php": "8.3",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.3.zip",
+                    "size": 1054799,
+                    "sha256": "2298e7ab4c836efe299cff59446a83bc4e28126a9f045fcf6ca0aa8ec86c7322"
+                },
+                {
+                    "php": "8.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.4.zip",
+                    "size": 1063744,
+                    "sha256": "b561f31d49de2db11ade3321ff4a2182246b82225dfe8ced8a13216928ec9237"
+                }
+            ]
+        },
+        {
+            "version": "2.2.0",
+            "released": "2026-10-15",
+            "notes": [
+                "New broadband page for your customers: online status, IP address, speed, 30-day uptime, daily usage chart, recent connections and why they ended",
+                "Router details, Wi-Fi networks and connected devices for managed routers",
+                "Line checks your customers can run themselves, with results in plain words",
+                "Optional customer actions, each with its own tick box: reconnect, line test, line checks, change Wi-Fi, change content filter",
+                "Matches your WHMCS theme's colours (Twenty-One and Six)"
+            ],
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php7.4.zip",
+                    "size": 958910,
+                    "sha256": "59cb219d71b5e17a94e0dfbc6f609b81087b5a109b13f8fcf1f022b9974f2461"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.1.zip",
+                    "size": 947466,
+                    "sha256": "54cd6c1a3f70e147d3e161d3936d7d55fbea1f28442851deec82e872f68e8f2e"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.2.zip",
+                    "size": 949917,
+                    "sha256": "faf853cb1b784893c975488762c296813c548eef562be6b509416cdda6c475b3"
+                }
+            ]
+        },
+        {
+            "version": "2.1.0",
+            "released": "2026-10-15",
+            "notes": [
+                "Audit trail: every order, suspension, upgrade, payment, import and customer change, with who did it, when and how it went",
+                "Audit trail tab with filters and CSV download, and the latest entries on each service's module tab",
+                "Release zips now open in Windows (they were tar files with a .zip name)"
+            ],
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php7.4.zip",
+                    "size": 921159,
+                    "sha256": "5e3a867dd9a70472acc4bc983ac2a09306344ee85a6abe257ae7b33074f41fac"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.1.zip",
+                    "size": 911216,
+                    "sha256": "33a1be0c534c1342bc8dd5cf1440b129b2610816f4176e0f7d6ee71792a7e073"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.2.zip",
+                    "size": 912704,
+                    "sha256": "461fd4d7bcf0252fa72ced075b5b8a7bbf8c71deb13c73f12a868f2dde25681a"
+                }
+            ]
+        },
+        {
+            "version": "2.0.0",
+            "released": "2026-10-15",
+            "notes": [
+                "One module for VoIP, broadband, mobile and UnifiedRPS on the Giant Reseller REST API v1",
+                "Dashboard with revenue, Giant cost and margin, charts and a needs-attention list",
+                "Reports with CSV downloads, and paying Giant invoices from WHMCS",
+                "Bulk import of Giant products, and of Giant services not yet in WHMCS",
+                "Setup guide in WHMCS and as a PDF",
+                "Daily check for new versions of the module"
+            ],
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php7.4.zip",
+                    "size": 872713,
+                    "sha256": "229c902427deff4bfe8c3cc751f5de649ab7749a75773a1f39e3dda2cfe3c309"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.1.zip",
+                    "size": 864391,
+                    "sha256": "3227851236ff49b7516df453c67af48d1318c8bd1daea3bd03f95790a243175c"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.2.zip",
+                    "size": 866799,
+                    "sha256": "68583abdcd046653219d6c0457717b37f8270a130fb7427504ee355e73409f01"
+                }
+            ]
+        }
+    ]
 }

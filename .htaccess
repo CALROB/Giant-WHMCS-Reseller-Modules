@@ -7,10 +7,12 @@ Options -Indexes
 <IfModule mod_mime.c>
     AddType application/json .json
     AddType application/zip .zip
+    AddType application/rss+xml .xml
 </IfModule>
 
-# Installed modules read giantreseller/latest.json to learn of new versions.
-<FilesMatch "\.(json|zip)$">
+# Installed modules read giantreseller/latest.json to learn of new versions;
+# releases.xml is the RSS feed of every release.
+<FilesMatch "\.(json|zip|xml)$">
     <IfModule mod_authz_core.c>
         Require all granted
     </IfModule>
@@ -21,7 +23,7 @@ Options -Indexes
 </FilesMatch>
 
 <IfModule mod_headers.c>
-    <FilesMatch "^latest\.json$">
+    <FilesMatch "^(latest\.json|releases\.xml)$">
         Header set Cache-Control "public, max-age=300"
     </FilesMatch>
 </IfModule>

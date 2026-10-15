@@ -1,0 +1,417 @@
+<!--
+  Giant Reseller setup guide. One source for both outputs:
+  - the addon's "Setup guide" page includes this fragment as it is;
+  - tools/build-guide.php wraps it for print and renders guide/Giant-Reseller-Setup-Guide.pdf.
+  Edit here, then rebuild the PDF.
+-->
+<style>
+.grg { --ink:#1d2433; --muted:#5b6475; --line:#d9dee7; --soft:#f4f6fa; --accent:#0b5cad; --ok:#1f7a3f; --warn:#9a5b00; --bad:#a3262a;
+  color:var(--ink); font:14px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; max-width:920px; }
+.grg .grg-logo { display:block; height:46px; width:auto; margin:0 0 14px; }
+.grg h1 { font-size:28px; line-height:1.2; margin:0 0 4px; }
+.grg .grg-sub { color:var(--muted); font-size:15px; margin:0 0 20px; }
+.grg h2 { font-size:20px; margin:32px 0 10px; padding-top:12px; border-top:2px solid var(--line); }
+.grg h3 { font-size:16px; margin:22px 0 8px; }
+.grg p, .grg li { margin:0 0 8px; }
+.grg ol, .grg ul { padding-left:22px; margin:0 0 12px; }
+.grg code { font-family:Consolas, "Cascadia Mono", Menlo, monospace; font-size:12.5px; background:var(--soft); border:1px solid var(--line); border-radius:3px; padding:0 4px; }
+.grg pre { font-family:Consolas, "Cascadia Mono", Menlo, monospace; font-size:12.5px; line-height:1.5; background:var(--soft); border:1px solid var(--line); border-radius:4px; padding:10px 12px; margin:0 0 12px; white-space:pre-wrap; word-break:break-word; }
+.grg pre code { background:none; border:0; padding:0; }
+.grg table { border-collapse:collapse; width:100%; margin:0 0 14px; font-size:13px; }
+.grg th, .grg td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+.grg th { background:var(--soft); font-weight:600; }
+.grg .grg-ui { font-weight:600; }
+.grg .grg-note, .grg .grg-tip, .grg .grg-warn, .grg .grg-example { border-left:4px solid var(--accent); background:var(--soft); padding:8px 12px; margin:0 0 14px; border-radius:0 4px 4px 0; }
+.grg .grg-tip { border-color:var(--ok); }
+.grg .grg-warn { border-color:var(--warn); }
+.grg .grg-example { border-color:#7a4fb5; }
+.grg .grg-example > strong:first-child, .grg .grg-note > strong:first-child, .grg .grg-tip > strong:first-child, .grg .grg-warn > strong:first-child { display:block; margin-bottom:2px; }
+.grg .grg-toc ol { columns:2; column-gap:32px; }
+.grg .grg-toc a { color:var(--accent); text-decoration:none; }
+.grg .grg-steps > li { margin-bottom:10px; }
+.grg .grg-badge { display:inline-block; font-size:11px; font-weight:600; padding:1px 6px; border-radius:3px; background:#f0ad4e; color:#fff; }
+.grg .grg-muted { color:var(--muted); }
+</style>
+
+<div class="grg">
+
+<svg class="grg-logo" role="img" aria-label="Giant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.6 164.9" fill="#101525"><path d="M134.3,133.6h-29.8c-1.6,0-2.8-1.3-2.8-2.8V46c0-1.6,1.3-2.8,2.8-2.8h29.8c1.6,0,2.8,1.3,2.8,2.8v84.8C137.1,132.3,135.9,133.6,134.3,133.6z"/><path d="M198.4,131.7c-0.3-1.8-0.6-3.3-0.7-4.8c-0.1-1.3-1.2-2.2-2.4-2.1c-0.6,0-1.2,0.3-1.6,0.8c-6.5,6.8-14.3,9.8-25.4,9.8c-19.1,0-31.9-10.7-31.9-26.9c0-12.6,8.6-23.3,22.6-27.8c9.7-3.1,20.8-4.9,34.4-5.7c1.2-0.1,2.2-1.1,2.2-2.3l0,0c0-7.1-2.9-9.8-10.7-9.8c-7.2,0-11.6,2.7-13.2,8c-0.3,1.1-1.3,1.8-2.4,1.7L141.8,70c-1.3-0.1-2.2-1.2-2.1-2.5c0-0.2,0-0.4,0.1-0.5c2.4-7.9,5.7-12.5,11.8-16.8c8.7-6.2,19.3-8.9,34.4-8.9c18.2,0,31.9,4.5,38.4,12.5c4.4,5.3,5.3,10,5.3,26v36c0,6.7,0.3,9.8,1.7,14.7c0.4,1.2-0.3,2.5-1.5,2.9c-0.2,0.1-0.5,0.1-0.7,0.1h-28.6C199.6,133.5,198.6,132.8,198.4,131.7z M195.7,94c0-1.3-1-2.3-2.3-2.3c-0.1,0-0.3,0-0.4,0c-13.5,1.9-19.9,6.5-19.9,14.1c0,5.1,3.3,8.2,8.9,8.2c9.6,0,13.6-5.3,13.6-18.4L195.7,94z"/><path d="M290,133.6c-1.6,0-2.8-1.3-2.8-2.8c0,0,0,0,0,0V76.6c0-7.8-2-10.9-7.5-10.9c-6.7,0-9.8,4.4-9.8,13.5v51.6c0,1.6-1.3,2.8-2.8,2.8h-29.8c-1.6,0-2.8-1.3-2.8-2.8c0,0,0,0,0,0V46c0-1.6,1.3-2.8,2.8-2.8c0,0,0,0,0,0h27.3c1.6,0,2.8,1.3,2.8,2.8v1c0,1.6,1.3,2.8,2.8,2.8c0.7,0,1.5-0.3,2-0.8c0.9-0.9,1.9-1.8,3-2.5c4.4-3.1,11.6-5.1,18.6-5.1c8.5,0,16.4,2.9,21.7,7.6c5.8,5.5,7.3,10.7,7.3,26.7v55.1c0,1.6-1.3,2.8-2.8,2.8L290,133.6z"/><path d="M382.8,66.2h-12.4c-1.6,0-2.8,1.3-2.8,2.8v30.5c0,6.9,2,9.3,8.2,9.3c2.2,0,4.3-0.3,6.4-0.7c1.5-0.3,3,0.7,3.3,2.3c0,0.2,0.1,0.3,0.1,0.5v19.4c0,1.4-1,2.6-2.4,2.8c-5.9,1.1-12,1.6-18,1.6c-12.2,0-19.1-2.2-24.6-7.6c-4.5-4.6-6.6-9.3-7.1-17.3c-0.2-2.4-0.2-2.4-0.2-15.1V69.1c0-1.6-1.3-2.8-2.8-2.8h-7.8c-1.6,0-2.8-1.3-2.8-2.8V46c0-1.6,1.3-2.8,2.8-2.8h9.7c1.5,0,2.7-1.1,2.8-2.6l1.9-23.8c0.1-1.4,1.3-2.5,2.7-2.6l25.4-0.9c1.6-0.1,2.9,1.2,2.9,2.7c0,0.1,0,0.1,0,0.2l-0.6,24.1c0,1.6,1.2,2.9,2.8,2.9c0,0,0,0,0.1,0h12.3c1.6,0,2.8,1.3,2.8,2.8v17.4C385.6,65,384.4,66.2,382.8,66.2z"/><path d="M137.7,17.8c-0.5-2.3-1.3-4.4-2.4-6.5c-1.9-3.5-4.8-6.3-8.2-8.3c-5.5-3.1-12.2-3.9-19.8-2.2c-11.5,2.6-21,9.5-28.3,20.8c-3.4,5.4-6.7,12.7-9.7,21.6L68.3,43c-1.4-0.3-2.8-0.6-4.2-0.8c-4.2-0.8-8.5-1.2-12.7-1.1h-1.2c-4.2-0.1-8.4,0.2-12.6,1c-1.5,0.2-3,0.5-4.4,0.8c-5.6,1.2-11,3.5-15.7,6.8c-6.4,4.6-10.2,12-10,19.9c0,10.2,4,15.8,14.6,20.9c-5.6,2.4-7.6,3.5-10.2,5.5c-4.5,3.5-7.2,8.9-7.3,14.6c0,5.6,2.4,9.7,8.4,14.2C4,128.7,0,134,0,142.1c0,15.3,16,22.8,49.3,22.8c19.5,0,30.8-1.8,40-6.4c8.6-4.5,14-13.4,14-23.1c0-8-3.8-16.6-9.7-21.3c-4.7-4-12.4-6.4-21.1-6.7l-28.9-1.3c-5.8-0.2-7.6-1.3-7.6-4.2c0-3.1,2.5-4.4,8.7-4.4h1.1c5.6,0.4,5.6,0.4,6.7,0.4c26.6,0,41.5-9.8,41.5-27.3c0-5.4-1.7-10.6-4.8-15c-1.5-2.1-3.3-4.1-5.4-5.7c-2-1.5-4.2-2.8-6.5-3.9c1.9-4.8,4.2-9.3,6.9-13.7c4.1-6.5,8.5-10.3,13-11.3c0.9-0.2,1.8-0.2,2.6,0.1c0.6,0.4,1,1,1.1,1.8c0.1,0.7,0.2,1.5,0.3,2.2c0.7,3.6,2.4,6.8,5,9.4l0.1,0.1l0.4,0.4c3.3,3.4,7.8,5.3,12.5,5.3c1.9,0,3.7-0.3,5.5-0.9c7.8-2.3,13.3-9.4,13.5-17.5C138.2,20.4,138,19.1,137.7,17.8z M38.6,132.3c1.3,0,2.6,0,3.8,0.2l21.7,0.9c6,0.4,8.2,1.8,8.2,5.8c0,5.5-4.2,7.1-18.6,7.1c-17.5,0-24.4-2.3-24.4-8.3C29.3,133.8,31.7,132.3,38.6,132.3z M51.3,81.2c-6.7,0-10.6-4-10.6-11.1c0-6.9,4-11.1,10.7-11.1c6.5,0,10.4,4.2,10.4,11.3C61.9,77.2,58.1,81.2,51.3,81.2z"/></svg>
+<h1>Giant Reseller module: setup guide</h1>
+<p class="grg-sub">Sell Giant wholesale VoIP, broadband, mobile and UnifiedRPS from your own WHMCS, using the Giant Reseller REST API v1. Module version 2.1.</p>
+
+<div class="grg-toc">
+<ol>
+  <li><a href="#grg-overview">What the module does</a></li>
+  <li><a href="#grg-before">Before you start</a></li>
+  <li><a href="#grg-install">Install the files</a></li>
+  <li><a href="#grg-server">Add your Giant server</a></li>
+  <li><a href="#grg-product">Create a product</a></li>
+  <li><a href="#grg-sync">Sync from Giant</a></li>
+  <li><a href="#grg-pricing">Set your prices</a></li>
+  <li><a href="#grg-order">Orders and the admin service tab</a></li>
+  <li><a href="#grg-lifecycle">Suspend, upgrade, terminate</a></li>
+  <li><a href="#grg-client">The client area and client actions</a></li>
+  <li><a href="#grg-link">Linking services you already have</a></li>
+  <li><a href="#grg-sandbox">Testing with a sandbox key</a></li>
+  <li><a href="#grg-migrate">Moving from the V1 modules</a></li>
+  <li><a href="#grg-trouble">Troubleshooting</a></li>
+  <li><a href="#grg-reference">Reference</a></li>
+</ol>
+</div>
+
+<h2 id="grg-overview">1. What the module does</h2>
+<p>One provisioning module covers every Giant wholesale category. On each WHMCS product, you choose whether it is <strong>VoIP</strong>, <strong>Broadband</strong>, <strong>Mobile</strong> or <strong>UnifiedRPS</strong>, and which Giant product it orders.</p>
+<ul>
+  <li>When WHMCS creates the service, the module places the order with Giant and stores the Giant order and service ids against it.</li>
+  <li>Suspend, unsuspend, terminate and upgrade/downgrade in WHMCS are passed on to Giant.</li>
+  <li>Your customers see their service in your client area, in your wording. Giant's name, ids, carriers and suppliers are never shown to them.</li>
+  <li>Giant bills <em>you</em> at wholesale. You set your own sell prices in WHMCS.</li>
+</ul>
+<p>It comes as two folders:</p>
+<table>
+  <tr><th style="width:38%">Folder</th><th>What it is</th></tr>
+  <tr><td><code>modules/servers/giantreseller</code></td><td>The provisioning module. Products and servers use it.</td></tr>
+  <tr><td><code>modules/addons/giantreseller</code></td><td>Its admin page: dashboard, reports, billing, <span class="grg-ui">Import products</span>, <span class="grg-ui">Import services</span>, <span class="grg-ui">Audit trail</span>, <span class="grg-ui">Sync from Giant</span>, <span class="grg-ui">Migrate from V1</span> and this guide.</td></tr>
+</table>
+
+<h2 id="grg-before">2. Before you start</h2>
+<table>
+  <tr><th style="width:32%">You need</th><th>Notes</th></tr>
+  <tr><td>WHMCS 8.x</td><td>PHP 7.4 or later, with the cURL extension.</td></tr>
+  <tr><td>Outbound HTTPS</td><td>Your WHMCS server must be able to reach <code>https://portal.giant.net.uk</code> on port 443.</td></tr>
+  <tr><td>A Giant API key</td><td>In the Giant portal: <span class="grg-ui">Partner area → API access</span>. A live key is 34 digits and capital letters, e.g. <code>48203917562841K7QZ…</code>, and places real orders. A sandbox key is the same with <code>test_</code> in front, and runs everything in the sandbox (see <a href="#grg-sandbox">section 12</a>).</td></tr>
+  <tr><td>WHMCS cron</td><td>Must be running. The module checks pending services once a day.</td></tr>
+</table>
+<h3>Setting up the key</h3>
+<ul>
+  <li><strong>Permissions:</strong> give the key the <em>Full reseller</em> preset. The module uses the catalogue, ordering, service lifecycle, VoIP, broadband, mobile, UnifiedRPS and invoice endpoints. A key without one of them gets a <code>403 forbidden</code> answer for that part.</li>
+  <li><strong>Allowed IPs:</strong> leave empty, or include your WHMCS server's public IP address. Calls from any other address get a 403 answer.</li>
+  <li><strong>Sandbox keys</strong> read your real data but never change anything.</li>
+</ul>
+<div class="grg-example"><strong>Example: check the key before you touch WHMCS</strong>
+From any computer with curl (the same works in Postman: import <code>https://portal.giant.net.uk/partner/api/v1/openapi.json</code> and set <code>bearerToken</code>):
+<pre><code>curl -H "Authorization: Bearer YOUR_API_KEY" https://portal.giant.net.uk/partner/api/v1/balance</code></pre>
+A working key answers:
+<pre><code>{"data":{"credit":"125.40"}}</code></pre>
+A wrong or inactive key answers <code>401</code> with <code>{"error":{"code":"unauthorized", …}}</code>. In that case, fix the key in the Giant portal first.</div>
+<div class="grg-tip"><strong>Tip</strong>Start with a <code>test_</code> key. Once a test order has gone end to end, swap it for your live key. Nothing else needs to change.</div>
+
+<h2 id="grg-install">3. Install the files</h2>
+<ol class="grg-steps">
+  <li>Copy both folders into your WHMCS installation so that you have:
+<pre><code>&lt;whmcs&gt;/modules/servers/giantreseller/giantreseller.php
+&lt;whmcs&gt;/modules/addons/giantreseller/giantreseller.php</code></pre></li>
+  <li>In WHMCS go to <span class="grg-ui">System Settings → Addon Modules</span>, find <strong>Giant Reseller</strong> and click <span class="grg-ui">Activate</span>. This creates the module's tables.</li>
+  <li>Click <span class="grg-ui">Configure</span> on the addon, tick the admin role groups that may use it (normally <em>Full Administrator</em>) and save.</li>
+  <li>The page is now under <span class="grg-ui">Addons → Giant Reseller</span>.</li>
+</ol>
+
+<h2 id="grg-server">4. Add your Giant server</h2>
+<p>Go to <span class="grg-ui">System Settings → Servers → Add New Server</span> and fill in:</p>
+<table>
+  <tr><th style="width:26%">Field</th><th style="width:34%">Enter</th><th>Why</th></tr>
+  <tr><td>Name</td><td><code>Giant</code> (any name)</td><td>For your own reference.</td></tr>
+  <tr><td>Hostname</td><td><code>portal.giant.net.uk</code></td><td>Leave blank to use this default.</td></tr>
+  <tr><td>Module</td><td><strong>Giant Reseller</strong></td><td></td></tr>
+  <tr><td>Password</td><td>Your API key, e.g. <code>test_48203917562841K7QZ…</code></td><td>WHMCS stores it encrypted. The key identifies your account.</td></tr>
+  <tr><td>Username, Access Hash, IP</td><td>leave empty</td><td>Not used. A V1 server's username (a 32-character code) can be cleared.</td></tr>
+</table>
+<p>Click <span class="grg-ui">Test Connection</span>. When it succeeds, WHMCS writes a line to <span class="grg-ui">System Logs → Activity Log</span> showing the mode and your credit.</p>
+<div class="grg-example"><strong>Example: activity log after Test Connection</strong>
+<pre><code>Giant Reseller: Connected as sandbox, credit 125.40 via https://portal.giant.net.uk/partner/api/v1</code></pre>
+With a live key it reads <code>Connected (live)</code>.</div>
+<p>Save the server. Then create a <strong>server group</strong> (<span class="grg-ui">Create New Group</span>) and add the server to it. Your products will use this group.</p>
+<p>The <span class="grg-ui">Billing</span> tab of <span class="grg-ui">Addons → Giant Reseller</span> now lists the server with its mode, credit, outstanding and overdue balance.</p>
+<h3 id="grg-dashboard">Dashboard and reports</h3>
+<p><span class="grg-ui">Addons → Giant Reseller</span> opens on the <strong>Dashboard</strong>:</p>
+<ul>
+  <li><strong>Tiles:</strong> active services, what customers pay you per month, Giant's cost per month, your monthly margin, what you owe Giant and your Giant credit.</li>
+  <li><strong>Charts:</strong> new services per month by category, what Giant invoiced you each month, and margin by category. Hover a bar for its figures, or use <em>Show as table</em>.</li>
+  <li><strong>Needs attention:</strong> services not linked to Giant, services whose last Giant call failed, services Giant has ended, and orders Giant still hasn't built after two days.</li>
+</ul>
+<p>The <strong>Reports</strong> tab has <em>Margin by product</em>, <em>All services</em> (filter by category and status) and <em>Needs attention</em>. Margin by product and All services also download as CSV.</p>
+<p>Figures are refreshed every five minutes; <span class="grg-ui">Refresh</span> fetches them now. Giant cost is Giant's price for each product and its configurable options (those synced from Giant) on the cycle Giant bills you. Usage, such as call charges, and one-off charges aren't in it; the <em>Giant invoices</em> chart is the real spend. Money is shown in your WHMCS default currency.</p>
+
+<h3 id="grg-audit">Audit trail</h3>
+<p>Everything done through the module is recorded in <span class="grg-ui">Addons → Giant Reseller → Audit trail</span>: who did it, when, from which IP address, to which service, the Giant order or invoice, and whether it succeeded, failed or was refused (with Giant's message).</p>
+<table>
+  <tr><th style="width:28%">Recorded</th><th>Examples</th></tr>
+  <tr><td>Services</td><td>Ordered at Giant, suspended (with the reason), unsuspended, terminated, upgraded (what changed), linked to a Giant order, refreshed by hand, set up at Giant, ended at Giant, imported</td></tr>
+  <tr><td>Customer changes</td><td>Do-not-disturb, divert, handsets added or removed, SIM barred or unbarred, from the client area</td></tr>
+  <tr><td>Billing</td><td>Every Giant invoice payment attempt, including declines, and payments refused because of the admin's role</td></tr>
+  <tr><td>Admin tools</td><td>Sync from Giant, product and service imports, each migration step, report downloads</td></tr>
+</table>
+<p>Filter by type, outcome, who (admins, customers or the system), service, text or dates, and download what you see as CSV. Each service's module tab also shows its latest entries. The module never edits or removes entries; routine background checks are not recorded, only changes.</p>
+<div class="grg-example"><strong>Example entries</strong>
+<table>
+  <tr><th>When</th><th>Who</th><th>Action</th><th>Service</th><th>Outcome</th><th>Detail</th></tr>
+  <tr><td>2026-10-15 09:12</td><td>Sam Jones (sam)<br><span class="grg-muted">Admin · 203.0.113.9</span></td><td>Suspended</td><td>#9921</td><td>Succeeded</td><td>Reason: Overdue invoice</td></tr>
+  <tr><td>2026-10-15 09:40</td><td>Acme Telecom Ltd<br><span class="grg-muted">Customer</span></td><td>Customer change</td><td>#9810</td><td>Succeeded</td><td>voip_divert (number=0113 4960000, on=1)</td></tr>
+  <tr><td>2026-10-15 10:02</td><td>Cron / automation<br><span class="grg-muted">System</span></td><td>Set up at Giant</td><td>#9944</td><td>Succeeded</td><td>Giant service 10233, status Active</td></tr>
+</table></div>
+
+<h3 id="grg-pay">Paying Giant invoices</h3>
+<p>When you owe Giant anything, the Billing tab lists the unpaid invoices that make up <em>Outstanding</em>, with overdue ones in red. You can pay:</p>
+<ul>
+  <li><strong>One invoice:</strong> <span class="grg-ui">Card / DD</span> charges the card or Direct Debit on your Giant account. <span class="grg-ui">Credit</span> uses your Giant account credit, and only appears when you have some.</li>
+  <li><strong>Everything:</strong> <span class="grg-ui">Pay all … from card / Direct Debit on file</span>, or <span class="grg-ui">Pay all from credit</span>. Invoices are paid oldest first, and with credit it stops when the credit runs out.</li>
+</ul>
+<p>Each button asks you to confirm first. The result is shown straight away and recorded in the activity log.</p>
+<p><strong>Who can pay:</strong> by default only the <em>Full Administrator</em> role. To let other roles pay, enter their role ids, comma-separated, under <span class="grg-ui">System Settings → Addon Modules → Giant Reseller → Configure → Who can pay Giant invoices</span>. The ids are listed under the box. Admins in other roles see the invoices but no Pay buttons, and a payment they post by hand is refused.</p>
+<div class="grg-example"><strong>Example: Pay all, where one card payment is declined</strong>
+<pre><code>Some invoices were not paid. 114.80 paid in total.
+  Invoice 30412: Paid, 114.80 taken
+  Invoice 30655: Not paid, 848.15 still to pay. The payment was declined or could not be taken.</code></pre>
+A decline takes nothing. Giant allows one attempt per invoice every 10 minutes (and one <em>Pay all</em> every 10 minutes), so try again later or pay that invoice from credit. With a sandbox key every check runs and nothing is taken.</div>
+
+<h2 id="grg-product">5. Create a product</h2>
+<p>Create a product as usual under <span class="grg-ui">System Settings → Products/Services</span> (type <em>Other</em> is fine). On its <span class="grg-ui">Module Settings</span> tab:</p>
+<ol class="grg-steps">
+  <li>Set <span class="grg-ui">Module Name</span> to <strong>Giant Reseller</strong> and <span class="grg-ui">Server Group</span> to your Giant group.</li>
+  <li>Choose the <span class="grg-ui">Category</span> and click <span class="grg-ui">Save Changes</span>. The Giant product list follows the category you saved.</li>
+  <li>Choose the <span class="grg-ui">Giant product</span> and save again. The <span class="grg-ui">Billing cycle</span> list then shows only the cycles that product is priced in.</li>
+  <li>Choose the <span class="grg-ui">Billing cycle</span> and <span class="grg-ui">Payment method</span>, then save.</li>
+  <li>Choose when WHMCS should create the service (e.g. <em>when the first payment is received</em>, or <em>when you accept the order</em>).</li>
+</ol>
+<table>
+  <tr><th style="width:22%">Setting</th><th>What it means</th></tr>
+  <tr><td>Category</td><td>VoIP, Broadband, Mobile or UnifiedRPS. This decides the client-area page.</td></tr>
+  <tr><td>Giant product</td><td>Only Giant's wholesale range is listed. Anything outside it would be refused anyway.</td></tr>
+  <tr><td>Billing cycle</td><td>The cycle <em>Giant</em> bills you on. It doesn't have to match the cycle you bill your customer on.</td></tr>
+  <tr><td>Payment method</td><td>How you pay Giant for this product.</td></tr>
+  <tr><td>Auto-accept</td><td>Reserved. Giant handles orders under your account terms.</td></tr>
+  <tr><td>Customer can …</td><td>One tick box per thing customers may change themselves, e.g. <em>VoIP: customer can divert</em>. All are ticked by default. Each product only uses the ones for its own category (see <a href="#grg-client">section 10</a>).</td></tr>
+</table>
+<div class="grg-example"><strong>Example: a broadband product</strong>
+<table>
+  <tr><th style="width:30%">Setting</th><th>Value</th></tr>
+  <tr><td>Category</td><td>Broadband</td></tr>
+  <tr><td>Giant product</td><td>Business FTTP 500</td></tr>
+  <tr><td>Billing cycle</td><td>Monthly</td></tr>
+  <tr><td>Payment method</td><td>Bank transfer</td></tr>
+  <tr><td>Customer can …</td><td><em>(leave as they are: broadband has none)</em></td></tr>
+</table></div>
+<div class="grg-example"><strong>Example: a hosted VoIP product where customers can't touch diverts</strong>
+<table>
+  <tr><th style="width:30%">Setting</th><th>Value</th></tr>
+  <tr><td>Category</td><td>VoIP</td></tr>
+  <tr><td>Giant product</td><td>Wholesale VoIP Tenant - Essential Bundle</td></tr>
+  <tr><td>Billing cycle</td><td>Monthly</td></tr>
+  <tr><td>Payment method</td><td>Direct Debit</td></tr>
+  <tr><td>VoIP: customer can dnd</td><td>ticked</td></tr>
+  <tr><td>VoIP: customer can divert</td><td><strong>unticked</strong></td></tr>
+</table></div>
+
+<h3 id="grg-import">Import many products at once</h3>
+<p>Rather than set products up one by one, use <span class="grg-ui">Addons → Giant Reseller → Import products</span>. It lists Giant's wholesale range, filtered by category if you like, with Giant's prices. It also shows what you have already imported.</p>
+<ol class="grg-steps">
+  <li>Tick the products you want. Change <em>Your product name</em> if you like: customers see this name.</li>
+  <li>Choose the settings for the new products:
+    <table>
+      <tr><th style="width:28%">Setting</th><th>What it does</th></tr>
+      <tr><td>Product group</td><td>One group per category (<em>VoIP</em>, <em>Broadband</em>, <em>Mobile</em>, <em>UnifiedRPS</em>), created if missing, or one of your existing groups.</td></tr>
+      <tr><td>Server group</td><td>The group holding your Giant server.</td></tr>
+      <tr><td>Pay Giant by</td><td>The payment method set on every new product.</td></tr>
+      <tr><td>Giant bills you</td><td>The preferred cycle. A product that doesn't have it uses its first priced cycle.</td></tr>
+      <tr><td>Your markup</td><td>A percentage on Giant's price, applied to every cycle, setup fee and option choice. Prices are rounded up to .99, or kept to the penny. Other WHMCS currencies are converted at your exchange rates.</td></tr>
+      <tr><td>Create the service</td><td>When WHMCS should place the Giant order. <em>When I accept the order</em> is the default and the safest.</td></tr>
+      <tr><td>Also</td><td>Create hidden (on by default). Sync from Giant (on by default). Copy Giant's description (off: it can name networks or suppliers). Import products again that were imported before.</td></tr>
+    </table></li>
+  <li>Click <span class="grg-ui">Preview</span>. You see each product's sell prices and where it will go, and nothing is created yet.</li>
+  <li>Click <span class="grg-ui">Import</span>. Each product is created on this module, synced, and its new option choices are priced at the same markup.</li>
+  <li>Check the products, then untick <em>Hidden</em> on each one when you're ready to sell it.</li>
+</ol>
+<div class="grg-example"><strong>Example: importing two products at 30% markup, rounded to .99</strong>
+<table>
+  <tr><th style="width:28%">Product</th><th style="width:36%">Your sell prices</th><th>Result</th></tr>
+  <tr><td>Business Fibre 500</td><td><strong>GBP</strong> monthly 54.99, annually 600.99, setup 65.99</td><td>Created (hidden).<br>Synced: fields 1 added; options 2 added.<br>Priced 1 option choice(s) at the same markup.</td></tr>
+  <tr><td>Hosted Voice Essential</td><td><strong>GBP</strong> monthly 0.99</td><td>Created (hidden).<br>Synced: fields none; options none.</td></tr>
+</table>
+Giant's <em>Business FTTP 500</em> costs 42.00 a month, so 42.00 + 30% = 54.60, rounded up to <strong>54.99</strong>. Its <em>Managed router</em> option, 5.00 a month at Giant, becomes 6.50 → <strong>6.99</strong>. Both were renamed in the <em>Your product name</em> column before importing.</div>
+<div class="grg-note"><strong>Safe to run again</strong>Products already imported are skipped unless you tick <em>Import again</em>. Prices you've already set are never overwritten.</div>
+
+<h2 id="grg-sync">6. Sync from Giant</h2>
+<p>Many Giant products need information at order time, such as an installation address reference or a router choice. <span class="grg-ui">Sync from Giant</span> copies those questions onto your product as WHMCS custom fields and configurable options.</p>
+<ol class="grg-steps">
+  <li>Save the product with its Giant product chosen.</li>
+  <li>Click the <span class="grg-ui">Sync from Giant</span> link under the <em>Giant product</em> setting. You can also click it on the addon's <span class="grg-ui">Products</span> tab.</li>
+  <li>Check the product and click <span class="grg-ui">Sync now</span>.</li>
+</ol>
+<p>The sync then:</p>
+<ul>
+  <li>creates or updates custom fields with Giant's plain names, descriptions, types, options and required flags;</li>
+  <li>creates or updates a configurable option group named after the Giant product and links it to your product;</li>
+  <li>never deletes anything. What Giant no longer has is listed as <em>No longer on Giant</em> for you to remove by hand;</li>
+  <li>never changes your prices. New options start at 0.00.</li>
+</ul>
+<div class="grg-example"><strong>Example: first sync of "Business FTTP 500"</strong>
+<pre><code>Synced. fields 1 added; options 2 added.
+
+Custom fields
+  Added      Installation address UPRN
+
+Configurable options
+  Added      Router, Router › Managed router</code></pre>
+Run it again and everything reads <em>Unchanged</em>. Run it after Giant changes the product to pick up the changes.</div>
+<p>Sync only runs when you click it. If a product has never been synced, the module orders without custom fields. If Giant needs any, it refuses the order and the admin sees Giant's message.</p>
+<div class="grg-tip"><strong>Visibility</strong>New fields are created to <em>show on the order form</em>. You can untick that, or tick <em>Admin only</em>, on the field. Later syncs keep your choice.</div>
+
+<h2 id="grg-pricing">7. Set your prices</h2>
+<p>Set your sell prices on the product's <span class="grg-ui">Pricing</span> tab and on each configurable option, as for any WHMCS product. Giant invoices you at wholesale for what you order. The addon's Dashboard shows your margin per month, and its Billing tab shows your credit and what you owe.</p>
+<div class="grg-example"><strong>Example</strong>Giant's wholesale price for <em>Business FTTP 500</em> is £42.00 a month. You set £59.00 a month in WHMCS, and £5.00 a month on the <em>Managed router</em> option. Your customer pays you £64.00, and Giant bills you the wholesale amounts.</div>
+
+<h2 id="grg-order">8. Orders and the admin service tab</h2>
+<p>When WHMCS creates the service (automatically, or with <span class="grg-ui">Module Commands → Create</span>):</p>
+<ol class="grg-steps">
+  <li>The module sends the order to Giant with the product, cycle, payment method and the customer's answers to the synced fields and options.</li>
+  <li>Giant returns an order id. The module saves it against the service straight away.</li>
+  <li>The module reads the Giant service and copies the username, domain and dedicated IP onto the WHMCS service. Everything after that, VoIP included, is reached by the Giant service id alone.</li>
+</ol>
+<p>If Giant hasn't built the service yet (common for broadband), the order still succeeds. The module checks again every hour, or click <span class="grg-ui">Refresh from Giant</span>.</p>
+<div class="grg-example"><strong>Example: the service's module tab after ordering</strong>
+<table>
+  <tr><th style="width:30%">Giant order</th><td>48213</td></tr>
+  <tr><th>Giant service id</th><td>9877</td></tr>
+  <tr><th>Category</th><td>broadband</td></tr>
+  <tr><th>Giant status</th><td>Active</td></tr>
+  <tr><th>Last synced</th><td>2026-10-14 09:42:10</td></tr>
+  <tr><th>Last error</th><td>—</td></tr>
+  <tr><th>Link to Giant order</th><td><em>(empty box: see <a href="#grg-link">section 11</a>)</em></td></tr>
+</table>
+A sandbox order shows the <span class="grg-badge">Sandbox order</span> badge.</div>
+<p><span class="grg-ui">Refresh from Giant</span> (a module button on the service) re-reads the service from Giant immediately.</p>
+<div class="grg-note"><strong>Placing an order twice is blocked</strong>If you press <span class="grg-ui">Create</span> on a service that already has a Giant order, the module answers <code>Already ordered as Giant order 48213</code>. It does not place a second order.</div>
+
+<h2 id="grg-lifecycle">9. Suspend, upgrade, terminate</h2>
+<table>
+  <tr><th style="width:26%">In WHMCS</th><th>What happens at Giant</th></tr>
+  <tr><td>Suspend</td><td>The Giant service is suspended. Your suspension reason is passed on.</td></tr>
+  <tr><td>Unsuspend</td><td>The Giant service is reactivated.</td></tr>
+  <tr><td>Terminate</td><td>The Giant service is terminated, and <em>Giant status</em> becomes <code>Terminated</code>. This cannot be undone.</td></tr>
+  <tr><td>Upgrade / Downgrade</td><td>If the new WHMCS product orders a different Giant product, the service moves to that product. If it's the same Giant product, the new configurable option values are sent instead.</td></tr>
+  <tr><td>Renew</td><td>Nothing. Giant bills you directly.</td></tr>
+</table>
+<p>If Giant refuses, WHMCS shows Giant's reason. It's also saved as <em>Last error</em> on the service tab.</p>
+<div class="grg-example"><strong>Example messages</strong>
+<pre><code>Giant API (403 not_available): Product 99 is not in your wholesale range.
+Giant API (409 conflict): Cancel the router order first.
+Not linked to a Giant order</code></pre></div>
+<div class="grg-warn"><strong>Services ended at Giant</strong>If the daily check finds a service that Giant reports <em>Terminated</em> or <em>Cancelled</em> while WHMCS still has it <em>Active</em>, the module raises an admin to-do item, <code>Giant service ended: WHMCS service #1234</code>, and records the reason on the service. It never changes WHMCS's status by itself.</div>
+
+<h2 id="grg-client">10. The client area and client actions</h2>
+<p>Each category has its own page on the customer's service details. Until Giant has built the service, customers see <em>Your service is being set up</em>.</p>
+<table>
+  <tr><th style="width:16%">Category</th><th style="width:38%">Customers see</th><th>Tick boxes on the product (all ticked by default)</th></tr>
+  <tr><td>VoIP</td><td>Phone numbers, their label and whether they're diverted; extensions and their status; 999 address registration</td><td><em>VoIP: customer can dnd</em>: do-not-disturb on/off per extension<br><em>VoIP: customer can divert</em>: a number's unconditional divert on/off (you set the destination)</td></tr>
+  <tr><td>Broadband</td><td>Online/offline, IP address, installation progress</td><td>none (changes go through you)</td></tr>
+  <tr><td>Mobile</td><td>SIMs, status, data used, plan, bars</td><td><em>Mobile: customer can bar</em>: bar data on a SIM<br><em>Mobile: customer can unbar</em>: lift a bar</td></tr>
+  <tr><td>UnifiedRPS</td><td>Handsets, make, MAC, model, provisioning status, handsets left</td><td><em>UnifiedRPS: customer can add</em>: add a handset (make + MAC)<br><em>UnifiedRPS: customer can remove</em>: remove a handset</td></tr>
+</table>
+<p>Untick a box on the product's <span class="grg-ui">Module Settings</span> tab to take that action away. Its button disappears from the client area, and the module refuses it even if someone posts it by hand. Products made by <span class="grg-ui">Import products</span> or the V1 migration start with every box ticked.</p>
+<div class="grg-example"><strong>Example: handsets customers can add but not remove</strong>
+<em>UnifiedRPS: customer can add</em> stays ticked; untick <em>UnifiedRPS: customer can remove</em>. The customer enters <em>Yealink</em> and <code>80:5E:C0:12:34:56</code>. The module checks the MAC is 12 hexadecimal characters before sending it, and the handset appears in the list within a minute.</div>
+<p><strong>Your wording.</strong> Every customer-facing text is in <code>modules/servers/giantreseller/lang/english.php</code>. Edit it to match your brand. For other languages, copy it to <code>&lt;language&gt;.php</code>, e.g. <code>french.php</code>. Errors are shown to customers in general terms; the detail is in the module log for you.</p>
+<div class="grg-example"><strong>Example: changing a message</strong>
+<pre><code>'setting_up' =&gt; 'Thanks for your order! Your Acme Broadband line is being set up.',</code></pre></div>
+<p>Pages are cached for 60 seconds per service, so a refresh doesn't hit the API every time.</p>
+
+<h2 id="grg-link">11. Linking services you already have</h2>
+<p>For a service created outside the module, for example ordered in the Giant portal, you can link it to its Giant order:</p>
+<ol class="grg-steps">
+  <li>Open the service in WHMCS. Make sure its product uses the Giant Reseller module with the right category.</li>
+  <li>Type the Giant order id into <span class="grg-ui">Link to Giant order</span> on the module tab, e.g. <code>48213</code>.</li>
+  <li>Click <span class="grg-ui">Save Changes</span>. The module checks the order is on your account before linking, then reads the service.</li>
+</ol>
+<p>If the order isn't yours, the service tab and activity log show <code>Giant has no order 48213 on this account.</code></p>
+
+<h3 id="grg-import-services">Bringing many existing Giant services into WHMCS</h3>
+<p>If you have Giant services that WHMCS doesn't know about yet, for example ones ordered in the Giant portal, use <span class="grg-ui">Addons → Giant Reseller → Import services</span>. It lists every Giant order on your account that no WHMCS service is linked to, with its product, domain, billing cycle and Giant status.</p>
+<ol class="grg-steps">
+  <li>Tick the orders you want to bill through WHMCS.</li>
+  <li>For each one, choose the <strong>WHMCS product</strong> (✓ marks products that order the same Giant product) and find the <strong>client</strong>: type part of their name, company or email (or a client id) and pick them from the list. Clicking into an empty client box suggests clients like the name Giant has on the service, and picking one ticks the row.Optionally set the <strong>next due date</strong>; blank uses the day Giant next bills you.</li>
+  <li>Choose how the customer pays (a WHMCS payment gateway), and whether the new services start <em>Active</em>.</li>
+  <li><span class="grg-ui">Preview</span> checks every row: it finds the client and reads each service from Giant. Then <span class="grg-ui">Import</span>.</li>
+</ol>
+<p>Each import creates the WHMCS service with WHMCS's own order process, with no invoice and no emails. It then links the service to its Giant order and copies across the domain, username and any synced custom field values. <strong>No new Giant order is placed</strong>: even a product set to create the service as soon as it's ordered links to the existing Giant order instead.</p>
+<div class="grg-example"><strong>Example</strong>
+<table>
+  <tr><th style="width:18%">Giant order</th><th style="width:30%">Giant service</th><th style="width:24%">WHMCS product</th><th>Client</th></tr>
+  <tr><td>#48213</td><td>Business FTTP 500<br><span class="grg-muted">acme.example · Monthly · Active</span></td><td>Business Fibre 500 ✓</td><td>Acme Telecom Ltd · #1042</td></tr>
+</table>
+Result: <em>Imported · WHMCS service #9921. Created and linked to Giant order 48213; 1 custom field value(s) copied.</em></div>
+<div class="grg-note"><strong>What isn't listed</strong>Orders already linked, cancelled orders, orders whose service is no longer live, and orders with more than one service (each WHMCS service links to one Giant order) can't be imported here. Giant may not have built a brand-new order's service yet; import it once it's live.</div>
+
+<h2 id="grg-sandbox">12. Testing with a sandbox key</h2>
+<p>A <code>test_</code> key works against the same address as a live key. Every check runs, but writes are simulated: nothing is ordered, billed or provisioned.</p>
+<ul>
+  <li>Test Connection reports <em>Connected as sandbox</em>, and the addon's Billing tab shows <span class="grg-badge">Sandbox</span>.</li>
+  <li>Sandbox order ids are above 900000000, e.g. <code>912345678</code>, and the service tab shows the <span class="grg-badge">Sandbox order</span> badge.</li>
+  <li>The daily check skips sandbox services. Sandbox services are never migrated.</li>
+</ul>
+<div class="grg-example"><strong>Example test run</strong>
+<ol style="margin-bottom:0">
+  <li>Server with a <code>test_</code> key → Test Connection → <em>Connected as sandbox</em>.</li>
+  <li>Product "Test FTTP" → Sync from Giant → order it as a test client → accept.</li>
+  <li>Service tab: Giant order <code>912345678</code> <span class="grg-badge">Sandbox order</span>.</li>
+  <li>Suspend, Unsuspend, Upgrade, Terminate: each returns <em>success</em>.</li>
+  <li>Swap the server's password for your live key when you're happy.</li>
+</ol></div>
+
+<h2 id="grg-migrate">13. Moving from the V1 modules</h2>
+<p>If you used the older <em>GiantResellerApiProv</em> or <em>GiantResellerVoIPApi</em> modules, open <span class="grg-ui">Addons → Giant Reseller → Migrate from V1</span>. Run each step as a <span class="grg-ui">Dry run</span> first: it shows what will change without changing anything. Every step is safe to run again.</p>
+<table>
+  <tr><th style="width:24%">Step</th><th>What it does</th></tr>
+  <tr><td>1. Servers</td><td>V1 servers held a password for the retired API. Paste a <strong>v1 API key</strong> for each. The key is checked with Giant first, then <span class="grg-ui">Check and switch</span> moves the server to this module.</td></tr>
+  <tr><td>2. Products</td><td><span class="grg-ui">Migrate products</span> switches each V1 product to this module, carrying over its Giant product, cycle and payment method. It renames old <code>id|name</code> fields and options to plain names (customer values are kept), then runs Sync from Giant.</td></tr>
+  <tr><td>3. Service links</td><td><span class="grg-ui">Import links</span> copies every V1 order link into this module. V1's tenant columns aren't needed: VoIP is reached by the Giant service id.</td></tr>
+  <tr><td>4. Old tables</td><td>Once you're happy, <span class="grg-ui">Drop old tables</span> removes the V1 link tables. This cannot be undone.</td></tr>
+</table>
+<div class="grg-example"><strong>Example: dry run of step 2</strong>
+<pre><code>Business FTTP 500
+Giant product 12 (Business FTTP 500), broadband, monthly, pays by banktransfer.
+Would rename field "41|Installation address UPRN" to "Installation address UPRN".
+Would rename option group "Business FTTP 500 (5|12)" to "Business FTTP 500".
+Would rename option "7|Router" to "Router".
+Would switch to giantreseller and sync from Giant.</code></pre></div>
+<div class="grg-warn"><strong>Do step 1 first</strong>Products can only move once their server has a v1 key. Until then, step 2 reports <em>Switch its server first</em>.</div>
+<p>Remove the old module folders (<code>modules/servers/GiantResellerApiProv</code>, <code>modules/servers/GiantResellerVoIPApi</code>) only after every product has moved.</p>
+
+<h2 id="grg-trouble">14. Troubleshooting</h2>
+<p>Every call to Giant is written to <span class="grg-ui">System Logs → Module Log</span> (turn it on first) as <code>giantreseller</code>, e.g. <code>POST /orders</code>, with your API key hidden. That's the place to look first.</p>
+<table>
+  <tr><th style="width:38%">You see</th><th style="width:30%">Meaning</th><th>Fix</th></tr>
+  <tr><td><code>Giant API (401 …): the API key was refused. Check the API key on the server. Key sent: 4820…XQ2M, 34 characters.</code></td><td>Giant has no active key matching what was sent. <em>Key sent</em> shows the first and last four characters and the length.</td><td>Compare it with the key in Partner area → API access, and try the key with curl (section 2). A live key is exactly 34 digits and capital letters (39 with <code>test_</code>). A different length usually means a pasted space or the old V1 password. If it matches, check the key is active and not revoked. Paste it again into the server's Password field and save.</td></tr>
+  <tr><td><code>Giant API (403 forbidden): This key may not call this endpoint (its permissions, its allowed IPs, or your account's API access).</code></td><td>The key is valid but limited.</td><td>In Partner area → API access, give the key the <em>Full reseller</em> preset. If it has allowed IPs, add your WHMCS server's public IP.</td></tr>
+  <tr><td><code>Giant API: could not connect (…)</code></td><td>WHMCS can't reach Giant.</td><td>Check outbound HTTPS to <code>portal.giant.net.uk</code>, DNS, and the PHP cURL extension.</td></tr>
+  <tr><td><code>Module settings incomplete: Giant product, Payment method.</code></td><td>The product isn't fully set up.</td><td>Finish the Module Settings tab (section 5).</td></tr>
+  <tr><td><code>Giant API (400 invalid): …</code></td><td>Giant rejected a value, often a required field left empty.</td><td>Sync the product (section 6) and make sure customers fill in required fields.</td></tr>
+  <tr><td><code>Giant API (403 not_available): …</code></td><td>Product outside your wholesale range.</td><td>Choose a product from the list. The range can change, so re-check the product's settings.</td></tr>
+  <tr><td><code>Giant API (409 not_ready): …</code></td><td>Giant is still building the service.</td><td>Nothing. Try again later, or wait for the daily check.</td></tr>
+  <tr><td><code>Giant API (422 refused): …</code></td><td>Giant can't do this, for the reason given.</td><td>Act on the message. It's written for people.</td></tr>
+  <tr><td><code>Giant API (500): Giant could not complete this just now.</code></td><td>A temporary problem at Giant.</td><td>Try again shortly. The module never retries orders by itself.</td></tr>
+  <tr><td><code>Unlinked: Giant API (404 not_found): …</code></td><td>Giant has no service for that order any more.</td><td>Check the order in the Giant portal. Re-link the service (section 11) or close it in WHMCS.</td></tr>
+  <tr><td><code>Not linked to a Giant order</code></td><td>The service has no Giant order.</td><td>Create it, or link it (section 11).</td></tr>
+  <tr><td>Product dropdown says <em>Add a Giant Reseller server … first</em></td><td>No server to ask.</td><td>Section 4. Assign the server group to the product and save.</td></tr>
+  <tr><td>Customer sees <em>Your service is being set up</em> for days</td><td>No Giant service id yet.</td><td>Click <span class="grg-ui">Refresh from Giant</span> and read <em>Last error</em>.</td></tr>
+</table>
+
+<h2 id="grg-reference">15. Reference</h2>
+<h3>Tables the module creates</h3>
+<table>
+  <tr><th style="width:36%">Table</th><th>Holds</th></tr>
+  <tr><td><code>mod_giantreseller_services</code></td><td>One row per WHMCS service: Giant order id, service id, status, sandbox flag, last sync, last error.</td></tr>
+  <tr><td><code>mod_giantreseller_fields</code></td><td>Which of your custom fields matches which Giant field.</td></tr>
+  <tr><td><code>mod_giantreseller_options</code></td><td>Which of your option groups, options and sub-options match which Giant ones.</td></tr>
+</table>
+<h3>Automatic tasks</h3>
+<table>
+  <tr><th style="width:36%">When</th><th>What</th></tr>
+  <tr><td>Hourly</td><td>Checks up to 20 services ordered in the last 14 days that Giant hasn't built yet, so a new order shows as ready within the hour.</td></tr>
+  <tr><td>Daily cron</td><td>Checks up to 50 services a day that have no Giant service id yet, or weren't checked in the last 24 hours. Fills in service ids, and flags services Giant has ended.</td></tr>
+  <tr><td>Product deleted</td><td>Its field and option matches are removed.</td></tr>
+  <tr><td>Daily (updates)</td><td>Checks whether Giant has released a newer version of this module. If so, every page of <span class="grg-ui">Addons → Giant Reseller</span> shows the release notes and the download for your server's PHP version, and you get one WHMCS to-do item. Nothing is installed for you. Switch it off under <span class="grg-ui">System Settings → Addon Modules → Giant Reseller → Configure → Check for updates</span>.</td></tr>
+</table>
+<h3>Giant API</h3>
+<p>Base address <code>https://portal.giant.net.uk/partner/api/v1</code>. The full reference is at <code>/partner/api/v1/guide.pdf</code>, and the machine-readable contract at <code>/partner/api/v1/openapi.json</code>.</p>
+
+</div>

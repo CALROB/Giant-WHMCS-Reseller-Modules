@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Giant Reseller WHMCS module releases</title>
+    <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/latest.json</link>
+    <atom:link href="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/releases.xml" rel="self" type="application/rss+xml"/>
+    <description>New versions of the Giant Reseller module for WHMCS.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 15 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Giant Reseller module 2.2.1</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.4.zip</link>
+      <guid isPermaLink="false">giantreseller-2.2.1</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Releases for PHP 8.3 and 8.4, alongside 7.4, 8.1 and 8.2&lt;/li&gt;&lt;li&gt;Release history and an RSS feed of every release, for your own download pages&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.1-php8.4.zip" length="1063744" type="application/zip"/>
+    </item>
+    <item>
+      <title>Giant Reseller module 2.2.0</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.2.zip</link>
+      <guid isPermaLink="false">giantreseller-2.2.0</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;New broadband page for your customers: online status, IP address, speed, 30-day uptime, daily usage chart, recent connections and why they ended&lt;/li&gt;&lt;li&gt;Router details, Wi-Fi networks and connected devices for managed routers&lt;/li&gt;&lt;li&gt;Line checks your customers can run themselves, with results in plain words&lt;/li&gt;&lt;li&gt;Optional customer actions, each with its own tick box: reconnect, line test, line checks, change Wi-Fi, change content filter&lt;/li&gt;&lt;li&gt;Matches your WHMCS theme&amp;#039;s colours (Twenty-One and Six)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.2.0-php8.2.zip" length="949917" type="application/zip"/>
+    </item>
+    <item>
+      <title>Giant Reseller module 2.1.0</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.2.zip</link>
+      <guid isPermaLink="false">giantreseller-2.1.0</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Audit trail: every order, suspension, upgrade, payment, import and customer change, with who did it, when and how it went&lt;/li&gt;&lt;li&gt;Audit trail tab with filters and CSV download, and the latest entries on each service&amp;#039;s module tab&lt;/li&gt;&lt;li&gt;Release zips now open in Windows (they were tar files with a .zip name)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.1.0-php8.2.zip" length="912704" type="application/zip"/>
+    </item>
+    <item>
+      <title>Giant Reseller module 2.0.0</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.2.zip</link>
+      <guid isPermaLink="false">giantreseller-2.0.0</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;One module for VoIP, broadband, mobile and UnifiedRPS on the Giant Reseller REST API v1&lt;/li&gt;&lt;li&gt;Dashboard with revenue, Giant cost and margin, charts and a needs-attention list&lt;/li&gt;&lt;li&gt;Reports with CSV downloads, and paying Giant invoices from WHMCS&lt;/li&gt;&lt;li&gt;Bulk import of Giant products, and of Giant services not yet in WHMCS&lt;/li&gt;&lt;li&gt;Setup guide in WHMCS and as a PDF&lt;/li&gt;&lt;li&gt;Daily check for new versions of the module&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.0.0-php8.2.zip" length="866799" type="application/zip"/>
+    </item>
+  </channel>
+</rss>

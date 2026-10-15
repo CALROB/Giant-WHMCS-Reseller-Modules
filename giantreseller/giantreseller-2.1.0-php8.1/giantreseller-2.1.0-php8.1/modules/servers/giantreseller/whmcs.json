@@ -1,0 +1,24 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-servers",
+    "name": "giantreseller",
+    "license": "proprietary",
+    "category": "provisioning",
+    "description": {
+        "name": "Giant Reseller",
+        "tagline": "Sell and provision Giant wholesale VoIP, broadband, mobile and UnifiedRPS through the Giant Reseller REST API v1.",
+        "long": "One provisioning module for every Giant wholesale category. Orders, upgrades, suspensions and terminations go through the Giant Reseller REST API v1 with a Bearer key; a test_ key runs everything in Giant's sandbox."
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https://portal.giant.net.uk/partner/api/v1/guide.pdf"
+    },
+    "authors": [
+        {
+            "name": "Giant",
+            "homepage": "https://portal.giant.net.uk/"
+        }
+    ]
+}
