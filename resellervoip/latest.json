@@ -63,6 +63,198 @@
             ]
         },
         {
+            "version": "3.2.1",
+            "released": "2026-10-15",
+            "notes": [
+                "Fixes the service page's script (broken in 3.2.0 by the tax-wording change) and the port form's remaining \"ex. VAT\""
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.2.0",
+            "released": "2026-10-15",
+            "notes": [
+                "Tax wording follows your WHMCS tax settings: gold-number setup fees and port prices say \"+VAT\" / \"ex VAT\" only when tax is enabled and the product is taxable, \"inc. VAT\" when your prices are entered inclusive of tax, and nothing at all when you do not charge tax; the tax's name comes from your first tax rule (VAT, GST, Sales tax…)"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.7",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: the number tiles are square-cornered and sit in a grid that fits as many per row as the page width allows (no more four cramped columns); a gold number's setup fee is written inside its tile on its own line; the chosen-number chips match"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.6",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: the per-number monthly price chip no longer prints over the number on narrow tiles (it sits after the number and only shows when the grid is wide enough); the active filter pill's label is white on the accent colour"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.5",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: a stylesheet comment named the supplier; reworded (the leak test now guards the checkout stylesheet too)"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.4",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: the number picker sits in its own card with its own colours on any WHMCS theme (it relied on Giant's theme variables, so dropdowns had no background and the block floated); dark themes keep dark controls"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.3",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: numbers are searched for every area code (the ported script only searched areas tagged with a carrier, so geographic areas showed nothing), and the API's national numbers are matched to the chosen area correctly, so the tiles appear",
+                "Checkout: no carrier names in the page's markup"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.2",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: the number search reads the endpoint's answer whether or not the browser already parsed it, and when the search is refused or fails it says why in the number panel instead of silently showing nothing"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.1",
+            "released": "2026-10-15",
+            "notes": [
+                "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.1.0",
+            "released": "2026-10-15",
+            "notes": [
+                "Module log: every API call the addon makes, every portal action with what was posted and what was answered, the checkout's decisions, the cron runs, billing approvals and the emails it sends are written to the WHMCS module log under \"resellervoip\" while module logging is on; passwords, keys and tokens are blanked",
+                "Checkout: the number picker no longer stops before drawing (it expected a pre-loaded number list); numbers load per area as before",
+                "Needs the Giant Reseller module 2.3.1 or later"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.0.3",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: when the numbers option is marked Hidden in WHMCS (so it is not on the form), the picker posts the chosen quantity itself, so the order carries the right number count"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.0.2",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: when the number picker cannot be shown, a signed-in WHMCS admin sees the reason on the configuration page (customers see only \"not available right now\"); it is also in the page source and the activity log",
+                "Checkout: an area name with an apostrophe no longer stops the picker's script"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.0.1",
+            "released": "2026-10-15",
+            "notes": [
+                "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
+                "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
+                "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
+                "Billing and Leaks use the same option matching for the billed seats and numbers"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
+            "version": "3.0.0",
+            "released": "2026-10-15",
+            "notes": [
+                "First release of the Phone System addon, numbered after the Giant API UK VoIP Reseller Provisioning & Addon Module (2.0.1 on the WHMCS Marketplace) that it replaces: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
+                "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
+                "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
+                "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
             "version": "2.0.1",
             "released": "2023-05-07",
             "notes": [

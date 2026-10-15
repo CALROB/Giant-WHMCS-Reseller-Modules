@@ -63,6 +63,21 @@
             ]
         },
         {
+            "version": "2.3.0",
+            "released": "2026-10-15",
+            "notes": [
+                "Ready for the Phone System addon: the VoIP page hands over to it when it is installed, the API client can send and receive files, and numbers and a 999 address chosen at checkout are passed with the order",
+                "VoIP pages use the documented API routes",
+                "The release build can build more than one module, each with its own downloads folder"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "",
+            "source": "changelog",
+            "url": ""
+        },
+        {
             "version": "2.2.1",
             "released": "2026-10-15",
             "notes": [
