@@ -1,10 +1,21 @@
 {
     "module": "resellervoip",
-    "version": "3.2.4",
+    "version": "3.2.5",
     "released": "2026-10-15",
     "notes": [
-        "The phone-system pages (the service page, Port a number, 999 records, the estate, the services list) carry their own colour palette, so they look right on any WHMCS theme; before, their styles read colour variables only Giant's own theme defined, leaving them unstyled on a reseller's site",
-        "New setting \"Accent colour\": a hex colour for buttons, tiles and highlights on those pages and at checkout; blank keeps the default blue"
+        "First release of the Phone System addon, numbered after the Giant API UK VoIP Reseller Provisioning & Addon Module (2.0.1 on the WHMCS Marketplace) that it replaces: the whole phone-system portal on every VoIP service's page (extensions, numbers, call flows, voicemail, recordings, the app, AI agents and the rest), call billing at your prices, checkout with number choice and a 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
+        "Needs the Giant Reseller module 2.3.1 or later; one zip per PHP version (7.4 to 8.4), for ionCube Loader 15.0 or newer",
+        "Checkout: customers pick their numbers (by area or type, memorable numbers with your margin on the setup fee) from a self-sizing grid of tiles, and fill in a structured 999 address, on the product's configuration page; products imported from Giant work as they are (\"Telephone Number(s)\", \"Extensions/Users\" and the other usual option names are recognised; any other name goes in the settings), the imported \"Telephone Numbers (DIDs)\" box is hidden since the picker fills it, and a numbers option marked Hidden still gets its quantity",
+        "Checkout: an inclusive-minutes panel that scales with the seats or numbers chosen; when numbers cannot be offered, customers see a short notice and a signed-in admin sees the reason on the page",
+        "Call billing: every night the addon collects each service's calls and SMS, prices them at your rates (uplift, exempt prefixes, SMS price, minimum charge, rounding) with inclusive minutes per product, and either adds them to the customer's next invoice or holds them on Awaiting approval, where you can approve with an override, decline, recompute or collect now; Charges, Reconcile, Leaks and a Cron log with Run now",
+        "Customers see this period's spend, their inclusive-minutes position and their billing history on the service page; call logs show your price, never Giant's cost",
+        "Account pages under Services: Port a number, 999 records and the phone estate, built from the API for the customer's services only; a daily port check emails customers as a port progresses and adds completed numbers to the service's billed quantity; a weekly 999 sweep",
+        "Email templates, created if missing and editable under Setup > Email Templates: app login and welcome (sent by you, with your app name and links), port submitted, port update, and for admins the new-billing digest and the high-usage alert",
+        "Tax wording follows your WHMCS tax settings and the product's taxable flag: \"+VAT\" and \"ex VAT\" when you charge tax on prices entered exclusive of it, \"inc. VAT\" when inclusive, nothing when you do not charge tax; the tax's name comes from your first tax rule",
+        "Every page the addon renders carries its own colour palette, so it looks right on any WHMCS theme, and the new \"Accent colour\" setting recolours buttons, tiles and highlights to match your brand",
+        "Module log: every API call, portal action with what was posted and answered, checkout decision, cron run, billing approval and email is written under \"resellervoip\" while module logging is on, with passwords, keys and tokens blanked",
+        "A signed-in admin sees on a customer's service page why each area is on or off (Giant's product, your Features matrix, areas switched off); the Guide tab lists common problems, and the setup guide's Troubleshooting chapter has the full list with fixes",
+        "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
     ],
     "php": [
         "7.4",
@@ -13,342 +24,67 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
     "releases": [
         {
-            "version": "3.2.4",
+            "version": "3.2.5",
             "released": "2026-10-15",
             "notes": [
-                "The phone-system pages (the service page, Port a number, 999 records, the estate, the services list) carry their own colour palette, so they look right on any WHMCS theme; before, their styles read colour variables only Giant's own theme defined, leaving them unstyled on a reseller's site",
-                "New setting \"Accent colour\": a hex colour for buttons, tiles and highlights on those pages and at checkout; blank keeps the default blue"
-            ],
-            "php": [
-                "7.4",
-                "8.1",
-                "8.2",
-                "8.3",
-                "8.4"
-            ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php{php}.zip",
-            "files": [
-                {
-                    "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php7.4.zip",
-                    "size": 1825163,
-                    "sha256": "3ee9f75eec3761b8a3e0ac591fc22d1f58b8450983415c47303b846e35609706"
-                },
-                {
-                    "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.1.zip",
-                    "size": 1819916,
-                    "sha256": "f4f2c2a692f8b0a4f5677714370c2183c0ed2e23d3dc2706c528c2714324db87"
-                },
-                {
-                    "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.2.zip",
-                    "size": 1821178,
-                    "sha256": "c33916cdfbd470af1fd0db6920bf8bae99b6f91c012b94984eea8f971be3b759"
-                },
-                {
-                    "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.3.zip",
-                    "size": 1820906,
-                    "sha256": "852b24cd44041abe83b2c78ca6a2a673ea0dce5c3daccf8b3050a5219de6e809"
-                },
-                {
-                    "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.4-php8.4.zip",
-                    "size": 1829415,
-                    "sha256": "fd31c6f5e6ad3f07879d53f5ef4dc496e8204f8734b45f46bc5ccfa2cb2626f5"
-                }
-            ]
-        },
-        {
-            "version": "3.2.3",
-            "released": "2026-10-15",
-            "notes": [
-                "Guide tab: common problems and their fixes (ionCube Loader, missing number picker, tax wording, call charges, the module log); the full list is in the setup guide's Troubleshooting chapter"
-            ],
-            "php": [
-                "7.4",
-                "8.1",
-                "8.2",
-                "8.3",
-                "8.4"
-            ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php{php}.zip",
-            "files": [
-                {
-                    "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php7.4.zip",
-                    "size": 1821140,
-                    "sha256": "5f5be4678aad72ec190cfc9f91588a2e09909e8912af138fe91217e26ea2193e"
-                },
-                {
-                    "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.1.zip",
-                    "size": 1816061,
-                    "sha256": "ccf38ec38876e6283e8935658a0ff3017ac50f7a00b0681b8a09b6817f58736d"
-                },
-                {
-                    "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.2.zip",
-                    "size": 1816377,
-                    "sha256": "8b9acc8a7c23a8a9f6b6088ccbd059762cfa4f4c28bce971851a3cc9b0ad4680"
-                },
-                {
-                    "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.3.zip",
-                    "size": 1816329,
-                    "sha256": "5aadc82023c25fc7fd3a1fd00a1b733ef32703704f2bb29563ec47921cd98a6f"
-                },
-                {
-                    "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.3-php8.4.zip",
-                    "size": 1824566,
-                    "sha256": "d1822480d62706238acf35fb722cf5a662f9120964697bc51223548c8d4d23fe"
-                }
-            ]
-        },
-        {
-            "version": "3.2.2",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: three or more number tiles per row; the number-type and area-code filters are stacked full width with controls of one height; the active filter pill's label is always readable"
-            ],
-            "php": [
-                "7.4",
-                "8.1",
-                "8.2",
-                "8.3",
-                "8.4"
-            ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php{php}.zip",
-            "files": [
-                {
-                    "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php7.4.zip",
-                    "size": 1788834,
-                    "sha256": "b5f88eb0eaec3d76020d12a6abb3e80d9f636a3eec14e9855d0e67e896c962de"
-                },
-                {
-                    "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.1.zip",
-                    "size": 1783293,
-                    "sha256": "3c929034e72360fb3fdb199922b73abfc577b8307f4d15e18a9b2db23884f696"
-                },
-                {
-                    "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.2.zip",
-                    "size": 1783598,
-                    "sha256": "b165d987bbbe3ba53c62ef4715ac292698c4c0b0bd06684d8e17d68672df22ac"
-                },
-                {
-                    "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.3.zip",
-                    "size": 1782126,
-                    "sha256": "5dd73869e1a714384d1d644e9db6f51b0afd4564413ea8df069d10f5c0a38bea"
-                },
-                {
-                    "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip",
-                    "size": 1789569,
-                    "sha256": "6bf4045653a23602df874806b958c0cd0f5f1c87b16a0b7424fbf3afecab0c37"
-                }
-            ]
-        },
-        {
-            "version": "3.2.1",
-            "released": "2026-10-15",
-            "notes": [
-                "Fixes the service page's script (broken in 3.2.0 by the tax-wording change) and the port form's remaining \"ex. VAT\""
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.2.0",
-            "released": "2026-10-15",
-            "notes": [
-                "Tax wording follows your WHMCS tax settings: gold-number setup fees and port prices say \"+VAT\" / \"ex VAT\" only when tax is enabled and the product is taxable, \"inc. VAT\" when your prices are entered inclusive of tax, and nothing at all when you do not charge tax; the tax's name comes from your first tax rule (VAT, GST, Sales tax…)"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.7",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: the number tiles are square-cornered and sit in a grid that fits as many per row as the page width allows (no more four cramped columns); a gold number's setup fee is written inside its tile on its own line; the chosen-number chips match"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.6",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: the per-number monthly price chip no longer prints over the number on narrow tiles (it sits after the number and only shows when the grid is wide enough); the active filter pill's label is white on the accent colour"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.5",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: a stylesheet comment named the supplier; reworded (the leak test now guards the checkout stylesheet too)"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.4",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: the number picker sits in its own card with its own colours on any WHMCS theme (it relied on Giant's theme variables, so dropdowns had no background and the block floated); dark themes keep dark controls"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.3",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: numbers are searched for every area code (the ported script only searched areas tagged with a carrier, so geographic areas showed nothing), and the API's national numbers are matched to the chosen area correctly, so the tiles appear",
-                "Checkout: no carrier names in the page's markup"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.2",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: the number search reads the endpoint's answer whether or not the browser already parsed it, and when the search is refused or fails it says why in the number panel instead of silently showing nothing"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.1",
-            "released": "2026-10-15",
-            "notes": [
-                "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.1.0",
-            "released": "2026-10-15",
-            "notes": [
-                "Module log: every API call the addon makes, every portal action with what was posted and what was answered, the checkout's decisions, the cron runs, billing approvals and the emails it sends are written to the WHMCS module log under \"resellervoip\" while module logging is on; passwords, keys and tokens are blanked",
-                "Checkout: the number picker no longer stops before drawing (it expected a pre-loaded number list); numbers load per area as before",
-                "Needs the Giant Reseller module 2.3.1 or later"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.0.3",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: when the numbers option is marked Hidden in WHMCS (so it is not on the form), the picker posts the chosen quantity itself, so the order carries the right number count"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.0.2",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: when the number picker cannot be shown, a signed-in WHMCS admin sees the reason on the configuration page (customers see only \"not available right now\"); it is also in the page source and the activity log",
-                "Checkout: an area name with an apostrophe no longer stops the picker's script"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.0.1",
-            "released": "2026-10-15",
-            "notes": [
-                "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
-                "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
-                "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
-                "Billing and Leaks use the same option matching for the billed seats and numbers"
-            ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
-        },
-        {
-            "version": "3.0.0",
-            "released": "2026-10-15",
-            "notes": [
-                "First release of the Phone System addon, numbered after the Giant API UK VoIP Reseller Provisioning & Addon Module (2.0.1 on the WHMCS Marketplace) that it replaces: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
-                "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
-                "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
+                "First release of the Phone System addon, numbered after the Giant API UK VoIP Reseller Provisioning & Addon Module (2.0.1 on the WHMCS Marketplace) that it replaces: the whole phone-system portal on every VoIP service's page (extensions, numbers, call flows, voicemail, recordings, the app, AI agents and the rest), call billing at your prices, checkout with number choice and a 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
+                "Needs the Giant Reseller module 2.3.1 or later; one zip per PHP version (7.4 to 8.4), for ionCube Loader 15.0 or newer",
+                "Checkout: customers pick their numbers (by area or type, memorable numbers with your margin on the setup fee) from a self-sizing grid of tiles, and fill in a structured 999 address, on the product's configuration page; products imported from Giant work as they are (\"Telephone Number(s)\", \"Extensions/Users\" and the other usual option names are recognised; any other name goes in the settings), the imported \"Telephone Numbers (DIDs)\" box is hidden since the picker fills it, and a numbers option marked Hidden still gets its quantity",
+                "Checkout: an inclusive-minutes panel that scales with the seats or numbers chosen; when numbers cannot be offered, customers see a short notice and a signed-in admin sees the reason on the page",
+                "Call billing: every night the addon collects each service's calls and SMS, prices them at your rates (uplift, exempt prefixes, SMS price, minimum charge, rounding) with inclusive minutes per product, and either adds them to the customer's next invoice or holds them on Awaiting approval, where you can approve with an override, decline, recompute or collect now; Charges, Reconcile, Leaks and a Cron log with Run now",
+                "Customers see this period's spend, their inclusive-minutes position and their billing history on the service page; call logs show your price, never Giant's cost",
+                "Account pages under Services: Port a number, 999 records and the phone estate, built from the API for the customer's services only; a daily port check emails customers as a port progresses and adds completed numbers to the service's billed quantity; a weekly 999 sweep",
+                "Email templates, created if missing and editable under Setup > Email Templates: app login and welcome (sent by you, with your app name and links), port submitted, port update, and for admins the new-billing digest and the high-usage alert",
+                "Tax wording follows your WHMCS tax settings and the product's taxable flag: \"+VAT\" and \"ex VAT\" when you charge tax on prices entered exclusive of it, \"inc. VAT\" when inclusive, nothing when you do not charge tax; the tax's name comes from your first tax rule",
+                "Every page the addon renders carries its own colour palette, so it looks right on any WHMCS theme, and the new \"Accent colour\" setting recolours buttons, tiles and highlights to match your brand",
+                "Module log: every API call, portal action with what was posted and answered, checkout decision, cron run, billing approval and email is written under \"resellervoip\" while module logging is on, with passwords, keys and tokens blanked",
+                "A signed-in admin sees on a customer's service page why each area is on or off (Giant's product, your Features matrix, areas switched off); the Guide tab lists common problems, and the setup guide's Troubleshooting chapter has the full list with fixes",
                 "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
             ],
-            "php": [],
-            "download": null,
-            "files": [],
-            "product": "",
-            "source": "changelog",
-            "url": ""
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2",
+                "8.3",
+                "8.4"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php7.4.zip",
+                    "size": 1831395,
+                    "sha256": "3bea2725e61931af6514d621a1fcc1cec2f48fd5e48061f855af4324763b8eaf"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php8.1.zip",
+                    "size": 1822873,
+                    "sha256": "e46e39eac4f99cf77c5f4ba389dc38a72685cc6371a3b8cb05ed53276137d598"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php8.2.zip",
+                    "size": 1823870,
+                    "sha256": "955ab3ed02ac6c9415f8c948bed67f62beecab606e94edb858a9938df2f35e71"
+                },
+                {
+                    "php": "8.3",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php8.3.zip",
+                    "size": 1823434,
+                    "sha256": "6296e1595a6585ede8647dfa8e7b73db94a13f7c734a50f52e46dec7817ff1d4"
+                },
+                {
+                    "php": "8.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.5-php8.4.zip",
+                    "size": 1831521,
+                    "sha256": "6805b22f15f2799bdd7ea8fe3d743c5d1ef48d22b64deb0dc8c067705ebed2e3"
+                }
+            ]
         },
         {
             "version": "2.0.1",
