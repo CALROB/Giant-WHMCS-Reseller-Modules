@@ -1,9 +1,9 @@
 {
     "module": "resellervoip",
-    "version": "3.1.1",
+    "version": "3.1.2",
     "released": "2026-10-15",
     "notes": [
-        "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
+        "Checkout: the number search reads the endpoint's answer whether or not the browser already parsed it, and when the search is refused or fails it says why in the number panel instead of silently showing nothing"
     ],
     "php": [
         "7.4",
@@ -12,14 +12,14 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
     "releases": [
         {
-            "version": "3.1.1",
+            "version": "3.1.2",
             "released": "2026-10-15",
             "notes": [
-                "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
+                "Checkout: the number search reads the endpoint's answer whether or not the browser already parsed it, and when the search is refused or fails it says why in the number panel instead of silently showing nothing"
             ],
             "php": [
                 "7.4",
@@ -28,37 +28,37 @@
                 "8.3",
                 "8.4"
             ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php{php}.zip",
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php{php}.zip",
             "files": [
                 {
                     "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php7.4.zip",
-                    "size": 1778853,
-                    "sha256": "bae06a165616239818cc4b9dd65375e845f55cdc71747d31c304ecde5871fe76"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php7.4.zip",
+                    "size": 1779556,
+                    "sha256": "03005d8b43efdc39b814b321647a9befbcf0b3b357824cc403ba335e873a814b"
                 },
                 {
                     "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.1.zip",
-                    "size": 1772609,
-                    "sha256": "fb3f936f3f5d141614efc7ec355139953a599b93afd13f24397e4266239b070d"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.1.zip",
+                    "size": 1773276,
+                    "sha256": "7ef08dda6a844f3a97cbfe7c8b7abbcab424681094c174a486d96ff6f50e4471"
                 },
                 {
                     "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.2.zip",
-                    "size": 1773760,
-                    "sha256": "8ff6e043e8023e152e5a7d42876b3bbae48cdbc49d4da0f9e95ee9c58196de3f"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.2.zip",
+                    "size": 1774428,
+                    "sha256": "69308b6ed8fb8c7c37a96ac2a7015fa773392ce9cfe2dab8fbad4349cb97f129"
                 },
                 {
                     "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.3.zip",
-                    "size": 1771714,
-                    "sha256": "29f81b838688c2edb5bccf664b54ed8ebe11bae213d762c533db318860937039"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.3.zip",
+                    "size": 1771890,
+                    "sha256": "4d24c0cd62563d9abdef2bc96230ce32700475f31cfd40b667c2ad89a845f32c"
                 },
                 {
                     "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.4.zip",
-                    "size": 1780113,
-                    "sha256": "411aacc62150eddef183b61fbe3ca7b128e2a7454d09df7624c1cd8c65bdb3b9"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.2-php8.4.zip",
+                    "size": 1780609,
+                    "sha256": "f97906a32d8bd12904fe654d194b7eccd54a69e0680fd8fd5967256bf9c1711c"
                 }
             ]
         },
