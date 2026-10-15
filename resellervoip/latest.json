@@ -1,0 +1,114 @@
+{
+    "module": "resellervoip",
+    "version": "1.0.0",
+    "released": "2026-10-15",
+    "notes": [
+        "First release of the Phone System addon, the successor to the Giant API UK VoIP Reseller Provisioning & Addon Module from the WHMCS Marketplace: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
+        "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
+        "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
+        "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
+    ],
+    "php": [
+        "7.4",
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4"
+    ],
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php{php}.zip",
+    "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
+    "releases": [
+        {
+            "version": "1.0.0",
+            "released": "2026-10-15",
+            "notes": [
+                "First release of the Phone System addon, the successor to the Giant API UK VoIP Reseller Provisioning & Addon Module from the WHMCS Marketplace: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
+                "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
+                "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
+                "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
+            ],
+            "php": [
+                "7.4",
+                "8.1",
+                "8.2",
+                "8.3",
+                "8.4"
+            ],
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php{php}.zip",
+            "files": [
+                {
+                    "php": "7.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php7.4.zip",
+                    "size": 1749768,
+                    "sha256": "0879ccd487c3e092f7d3d3e1dd023c8b01d42404278ddccf1d9e339a0c727ceb"
+                },
+                {
+                    "php": "8.1",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.1.zip",
+                    "size": 1746191,
+                    "sha256": "d30ac708da4a582db29bc4a3260e4d6d1d0e01fa850356be271d47bc61831f3a"
+                },
+                {
+                    "php": "8.2",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.2.zip",
+                    "size": 1746770,
+                    "sha256": "8ec567ca08a9a93db68775f2ffd64d448acd9bbb00bdf77a15a3760983d56843"
+                },
+                {
+                    "php": "8.3",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.3.zip",
+                    "size": 1745948,
+                    "sha256": "7618f2639e8411de6e3ac22def5ad813026f0a76c61a28be59779fe7dff54381"
+                },
+                {
+                    "php": "8.4",
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.4.zip",
+                    "size": 1753886,
+                    "sha256": "de59af6d4b17272be6c27307fe2ddffd37451f084745fba316a5313890dfb732"
+                }
+            ]
+        },
+        {
+            "version": "2.0.1",
+            "released": "2023-05-07",
+            "notes": [
+                "Automated monthly call billing, custom call bundle packages, and automatic creation of the custom fields and configurable options the module needs",
+                "Client area: live call logs, Zerotouch hardware auto-provisioning, SMS logs and outbound SMS, and management of hunt lists, telephones, IVR menus, extensions, call queues, forwarding destinations, short numbers, number purchasing and voicemail"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "Giant API: UK VoIP Reseller Provisioning & Addon Module",
+            "source": "WHMCS Marketplace",
+            "url": "https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module"
+        },
+        {
+            "version": "1.1",
+            "released": "2022-07-20",
+            "notes": [
+                "Zerotouch hardware provisioning",
+                "Fewer custom fields needed to provision a service",
+                "Virtual Landline product for resellers"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "Giant API: UK VoIP Reseller Provisioning & Addon Module",
+            "source": "WHMCS Marketplace",
+            "url": "https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module"
+        },
+        {
+            "version": "1.0",
+            "released": "2022-06-01",
+            "notes": [
+                "First release: automatic provisioning of UK VoIP tenants from the reseller's own WHMCS installation"
+            ],
+            "php": [],
+            "download": null,
+            "files": [],
+            "product": "Giant API: UK VoIP Reseller Provisioning & Addon Module",
+            "source": "WHMCS Marketplace",
+            "url": "https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module"
+        }
+    ]
+}

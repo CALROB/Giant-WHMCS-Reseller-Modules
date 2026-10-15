@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Giant Reseller Phone System addon releases</title>
+    <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/latest.json</link>
+    <atom:link href="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml" rel="self" type="application/rss+xml"/>
+    <description>New versions of the Giant Reseller Phone System addon for WHMCS.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 15 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Giant Reseller Phone System addon 1.0.0</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.4.zip</link>
+      <guid isPermaLink="false">resellervoip-1.0.0</guid>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;First release of the Phone System addon, the successor to the Giant API UK VoIP Reseller Provisioning &amp;amp; Addon Module from the WHMCS Marketplace: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding&lt;/li&gt;&lt;li&gt;Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15&lt;/li&gt;&lt;li&gt;Guide chapter in Addons &amp;gt; Giant Reseller &amp;gt; Setup guide, and the parity checklist and sandbox run sheet in the module&amp;#039;s tests folder&lt;/li&gt;&lt;li&gt;Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.4.zip" length="1753886" type="application/zip"/>
+    </item>
+    <item>
+      <title>Giant API: UK VoIP Reseller Provisioning &amp; Addon Module 2.0.1</title>
+      <link>https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module</link>
+      <guid isPermaLink="false">resellervoip-2.0.1</guid>
+      <pubDate>Sun, 07 May 2023 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Automated monthly call billing, custom call bundle packages, and automatic creation of the custom fields and configurable options the module needs&lt;/li&gt;&lt;li&gt;Client area: live call logs, Zerotouch hardware auto-provisioning, SMS logs and outbound SMS, and management of hunt lists, telephones, IVR menus, extensions, call queues, forwarding destinations, short numbers, number purchasing and voicemail&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Giant API: UK VoIP Reseller Provisioning &amp;amp; Addon Module, released through the WHMCS Marketplace.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giant API: UK VoIP Reseller Provisioning &amp; Addon Module 1.1</title>
+      <link>https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module</link>
+      <guid isPermaLink="false">resellervoip-1.1</guid>
+      <pubDate>Wed, 20 Jul 2022 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Zerotouch hardware provisioning&lt;/li&gt;&lt;li&gt;Fewer custom fields needed to provision a service&lt;/li&gt;&lt;li&gt;Virtual Landline product for resellers&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Giant API: UK VoIP Reseller Provisioning &amp;amp; Addon Module, released through the WHMCS Marketplace.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giant API: UK VoIP Reseller Provisioning &amp; Addon Module 1.0</title>
+      <link>https://marketplace.whmcs.com/product/6452-giant-api-uk-voip-reseller-provisioning-addon-module</link>
+      <guid isPermaLink="false">resellervoip-1.0</guid>
+      <pubDate>Wed, 01 Jun 2022 12:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;First release: automatic provisioning of UK VoIP tenants from the reseller&amp;#039;s own WHMCS installation&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Giant API: UK VoIP Reseller Provisioning &amp;amp; Addon Module, released through the WHMCS Marketplace.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
