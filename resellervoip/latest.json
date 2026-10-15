@@ -1,9 +1,9 @@
 {
     "module": "resellervoip",
-    "version": "3.2.1",
+    "version": "3.2.2",
     "released": "2026-10-15",
     "notes": [
-        "Fixes the service page's script (broken in 3.2.0 by the tax-wording change) and the port form's remaining \"ex. VAT\""
+        "Checkout: three or more number tiles per row; the number-type and area-code filters are stacked full width with controls of one height; the active filter pill's label is always readable"
     ],
     "php": [
         "7.4",
@@ -12,14 +12,14 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
     "releases": [
         {
-            "version": "3.2.1",
+            "version": "3.2.2",
             "released": "2026-10-15",
             "notes": [
-                "Fixes the service page's script (broken in 3.2.0 by the tax-wording change) and the port form's remaining \"ex. VAT\""
+                "Checkout: three or more number tiles per row; the number-type and area-code filters are stacked full width with controls of one height; the active filter pill's label is always readable"
             ],
             "php": [
                 "7.4",
@@ -28,37 +28,37 @@
                 "8.3",
                 "8.4"
             ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php{php}.zip",
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php{php}.zip",
             "files": [
                 {
                     "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php7.4.zip",
-                    "size": 1787271,
-                    "sha256": "817612ac787031c31176b4854cee8754b6662f5f765aab1c2191c04d336b7d0a"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php7.4.zip",
+                    "size": 1787510,
+                    "sha256": "6b5878ceb858e64e9b1e55a8d31bbbc05c7dd92c0abce4dc3c71cef27a8b16ea"
                 },
                 {
                     "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.1.zip",
-                    "size": 1782656,
-                    "sha256": "2277260756ffd4322424817c795eb09c9ce3467a1cbaf75b94711d7cf35a8990"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.1.zip",
+                    "size": 1783084,
+                    "sha256": "5539afa236c62c5ec94b6023d9696a4e499c133194511bbdcc3c92f399f2ce8a"
                 },
                 {
                     "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.2.zip",
-                    "size": 1783586,
-                    "sha256": "f9baa1016222e2f96e125bf5524936ebe87dd719a05d460e8e9f50cb84aa29ea"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.2.zip",
+                    "size": 1783490,
+                    "sha256": "6ac9c544a351f2ccdfc7552dafeb42257b009ca97b0848eeaae5d67d3985677b"
                 },
                 {
                     "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.3.zip",
-                    "size": 1781862,
-                    "sha256": "20692823eb74bc02e9661996977a04c2892d110472d10b9a8b93624518e2d148"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.3.zip",
+                    "size": 1781892,
+                    "sha256": "430916e92de5cfc9d6f5e8cd869916d89cfd5090fba2583ac587dead444620e7"
                 },
                 {
                     "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.1-php8.4.zip",
-                    "size": 1789141,
-                    "sha256": "5f0a3feaab012854e9764934aa7bcda409ccf4862ec901d3626a3bc38e4a2a69"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.2.2-php8.4.zip",
+                    "size": 1789852,
+                    "sha256": "9d0ab8a83070d133ff8ecb02545aa74d69d8244d799ec7e5482afb0f7527eb69"
                 }
             ]
         },
