@@ -1,12 +1,12 @@
 {
     "module": "resellervoip",
-    "version": "1.0.0",
+    "version": "3.0.1",
     "released": "2026-10-15",
     "notes": [
-        "First release of the Phone System addon, the successor to the Giant API UK VoIP Reseller Provisioning & Addon Module from the WHMCS Marketplace: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
-        "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
-        "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
-        "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
+        "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
+        "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
+        "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
+        "Billing and Leaks use the same option matching for the billed seats and numbers"
     ],
     "php": [
         "7.4",
@@ -15,17 +15,17 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
     "releases": [
         {
-            "version": "1.0.0",
+            "version": "3.0.1",
             "released": "2026-10-15",
             "notes": [
-                "First release of the Phone System addon, the successor to the Giant API UK VoIP Reseller Provisioning & Addon Module from the WHMCS Marketplace: the whole phone-system portal, call billing at your prices, checkout with number choice and 999 address, number ports, 999 records and the phone estate, all through the Giant Reseller API with your branding",
-                "Needs the Giant Reseller module 2.3.0 or later; one zip per PHP version (7.4 to 8.4), encoded with ionCube 15",
-                "Guide chapter in Addons > Giant Reseller > Setup guide, and the parity checklist and sandbox run sheet in the module's tests folder",
-                "Known limits in this release: CRM sign-in integrations, estate exports and the optimisation wizard, AI and storage metered re-billing, and extension QR login codes are not available through the API yet and are shown as such"
+                "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
+                "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
+                "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
+                "Billing and Leaks use the same option matching for the billed seats and numbers"
             ],
             "php": [
                 "7.4",
@@ -34,37 +34,37 @@
                 "8.3",
                 "8.4"
             ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php{php}.zip",
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php{php}.zip",
             "files": [
                 {
                     "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php7.4.zip",
-                    "size": 1749768,
-                    "sha256": "0879ccd487c3e092f7d3d3e1dd023c8b01d42404278ddccf1d9e339a0c727ceb"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php7.4.zip",
+                    "size": 1758224,
+                    "sha256": "a573d3d72d2c33b3d47008b149a31a476348c4aa3ffae725cfe215b0e2ddcd40"
                 },
                 {
                     "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.1.zip",
-                    "size": 1746191,
-                    "sha256": "d30ac708da4a582db29bc4a3260e4d6d1d0e01fa850356be271d47bc61831f3a"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.1.zip",
+                    "size": 1753400,
+                    "sha256": "ea2a8b925c81f40ffc963f88db86c79aa368d5e313ed12f6e432d90c5c352b00"
                 },
                 {
                     "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.2.zip",
-                    "size": 1746770,
-                    "sha256": "8ec567ca08a9a93db68775f2ffd64d448acd9bbb00bdf77a15a3760983d56843"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.2.zip",
+                    "size": 1755560,
+                    "sha256": "367b0d501c290f22f6d0ba79b797c4aab65dd2327e89b5fa98113e12739e98ea"
                 },
                 {
                     "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.3.zip",
-                    "size": 1745948,
-                    "sha256": "7618f2639e8411de6e3ac22def5ad813026f0a76c61a28be59779fe7dff54381"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.3.zip",
+                    "size": 1754044,
+                    "sha256": "58f1ee511862ecda43a1d4535369a85fa4b7324162efa219f99a90c013f9b104"
                 },
                 {
                     "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-1.0.0-php8.4.zip",
-                    "size": 1753886,
-                    "sha256": "de59af6d4b17272be6c27307fe2ddffd37451f084745fba316a5313890dfb732"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.4.zip",
+                    "size": 1761882,
+                    "sha256": "7fdbace9ecf78c7940a5c75246ce16ecd2cc167b3bc5df04c11d3b0751d3f96b"
                 }
             ]
         },

@@ -37,32 +37,32 @@
                 {
                     "php": "7.4",
                     "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php7.4.zip",
-                    "size": 1111214,
-                    "sha256": "c1da95587469d734cf31933252853c26d116294a46693726d5704f4595a2e229"
+                    "size": 1111941,
+                    "sha256": "9478d90bf0883ed2cac5ebd974f4d33fa06009cc18c83d7387ad1fb7ed1e241a"
                 },
                 {
                     "php": "8.1",
                     "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.1.zip",
-                    "size": 1098735,
-                    "sha256": "a4f117791b6ff7800e12500079bbfa5aba659b24ca415c18dc6b30bf70b66c75"
+                    "size": 1099936,
+                    "sha256": "7202af5dae36720d16f188a7dfb4d8b9a005c63f58c583323372753fc3584ddc"
                 },
                 {
                     "php": "8.2",
                     "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.2.zip",
-                    "size": 1101079,
-                    "sha256": "559cc20d160d715e6c6ea5a0b19b0a61de7b480ea206282f30d41d078998e4f8"
+                    "size": 1101713,
+                    "sha256": "10db93c9d3dbf9dffc0f75b2e234e1e4624fa53245804dbf26408688185ec5c7"
                 },
                 {
                     "php": "8.3",
                     "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.3.zip",
-                    "size": 1101072,
-                    "sha256": "e1f19ae607a5cad927cc30037dd44b6ff5065fd9dca3581d24081bca0e838394"
+                    "size": 1102006,
+                    "sha256": "72ab8475b4ec44aede475f5d98dbb208a58e23203799f120b5ee8f79aade5191"
                 },
                 {
                     "php": "8.4",
                     "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.4.zip",
-                    "size": 1109983,
-                    "sha256": "85acfc4e713cb183e212203c2ebce94150d9e4789b13565580a7bd47eb5a68f6"
+                    "size": 1111186,
+                    "sha256": "9697484741474d0d6d437e06ebf1312696290fccb275647521972fe55de3526e"
                 }
             ]
         },
