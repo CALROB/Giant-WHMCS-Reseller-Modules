@@ -1,11 +1,9 @@
 {
     "module": "giantreseller",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "released": "2026-10-15",
     "notes": [
-        "Ready for the Phone System addon: the VoIP page hands over to it when it is installed, the API client can send and receive files, and numbers and a 999 address chosen at checkout are passed with the order",
-        "VoIP pages use the documented API routes",
-        "The release build can build more than one module, each with its own downloads folder"
+        "The Phone System addon logs its API calls under its own name in the module log (the API client can be handed another logger)"
     ],
     "php": [
         "7.4",
@@ -14,16 +12,14 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/releases.xml",
     "releases": [
         {
-            "version": "2.3.0",
+            "version": "2.3.1",
             "released": "2026-10-15",
             "notes": [
-                "Ready for the Phone System addon: the VoIP page hands over to it when it is installed, the API client can send and receive files, and numbers and a 999 address chosen at checkout are passed with the order",
-                "VoIP pages use the documented API routes",
-                "The release build can build more than one module, each with its own downloads folder"
+                "The Phone System addon logs its API calls under its own name in the module log (the API client can be handed another logger)"
             ],
             "php": [
                 "7.4",
@@ -32,37 +28,37 @@
                 "8.3",
                 "8.4"
             ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php{php}.zip",
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php{php}.zip",
             "files": [
                 {
                     "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php7.4.zip",
-                    "size": 1111941,
-                    "sha256": "9478d90bf0883ed2cac5ebd974f4d33fa06009cc18c83d7387ad1fb7ed1e241a"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php7.4.zip",
+                    "size": 1115201,
+                    "sha256": "53a82765819fc11f74c7e7cc5406ac6a09d11bbc8767401230d9684c51127f8b"
                 },
                 {
                     "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.1.zip",
-                    "size": 1099936,
-                    "sha256": "7202af5dae36720d16f188a7dfb4d8b9a005c63f58c583323372753fc3584ddc"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.1.zip",
+                    "size": 1102643,
+                    "sha256": "e62a8c10926b68bb9709dfce94ce18ded8e7165ba66d97a8cbbadcc96abc0bb9"
                 },
                 {
                     "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.2.zip",
-                    "size": 1101713,
-                    "sha256": "10db93c9d3dbf9dffc0f75b2e234e1e4624fa53245804dbf26408688185ec5c7"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.2.zip",
+                    "size": 1104529,
+                    "sha256": "cae6c55483c61d87f2063e7a5b583174592301c1311645e86e4edf331dbb16f2"
                 },
                 {
                     "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.3.zip",
-                    "size": 1102006,
-                    "sha256": "72ab8475b4ec44aede475f5d98dbb208a58e23203799f120b5ee8f79aade5191"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.3.zip",
+                    "size": 1104885,
+                    "sha256": "5a7755f6160044155d55ea4a8c9b479c7b882fd160cb5282ddcad8b6e93d5f28"
                 },
                 {
                     "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.4.zip",
-                    "size": 1111186,
-                    "sha256": "9697484741474d0d6d437e06ebf1312696290fccb275647521972fe55de3526e"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.4.zip",
+                    "size": 1113983,
+                    "sha256": "02a091bb023e1a2503d2956aca871b3117b1fe2e0eb601fd00ab73007ae5a11d"
                 }
             ]
         },

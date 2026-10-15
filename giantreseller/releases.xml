@@ -8,12 +8,12 @@
     <language>en-gb</language>
     <lastBuildDate>Thu, 15 Oct 2026 12:00:00 +0000</lastBuildDate>
     <item>
-      <title>Giant Reseller WHMCS module 2.3.0</title>
-      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.4.zip</link>
-      <guid isPermaLink="false">giantreseller-2.3.0</guid>
+      <title>Giant Reseller WHMCS module 2.3.1</title>
+      <link>https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.4.zip</link>
+      <guid isPermaLink="false">giantreseller-2.3.1</guid>
       <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
-      <description>&lt;ul&gt;&lt;li&gt;Ready for the Phone System addon: the VoIP page hands over to it when it is installed, the API client can send and receive files, and numbers and a 999 address chosen at checkout are passed with the order&lt;/li&gt;&lt;li&gt;VoIP pages use the documented API routes&lt;/li&gt;&lt;li&gt;The release build can build more than one module, each with its own downloads folder&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
-      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.0-php8.4.zip" length="1111186" type="application/zip"/>
+      <description>&lt;ul&gt;&lt;li&gt;The Phone System addon logs its API calls under its own name in the module log (the API client can be handed another logger)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Downloads: &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php7.4.zip&quot;&gt;PHP 7.4&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.1.zip&quot;&gt;PHP 8.1&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.2.zip&quot;&gt;PHP 8.2&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.3.zip&quot;&gt;PHP 8.3&lt;/a&gt;, &lt;a href=&quot;https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.4.zip&quot;&gt;PHP 8.4&lt;/a&gt;&lt;/p&gt;</description>
+      <enclosure url="https://portal.giant.net.uk/downloads/reseller-modules/giantreseller/giantreseller-2.3.1-php8.4.zip" length="1113983" type="application/zip"/>
     </item>
     <item>
       <title>Giant Reseller WHMCS module 2.2.1</title>

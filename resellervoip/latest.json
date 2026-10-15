@@ -1,12 +1,9 @@
 {
     "module": "resellervoip",
-    "version": "3.0.1",
+    "version": "3.1.1",
     "released": "2026-10-15",
     "notes": [
-        "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
-        "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
-        "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
-        "Billing and Leaks use the same option matching for the billed seats and numbers"
+        "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
     ],
     "php": [
         "7.4",
@@ -15,17 +12,14 @@
         "8.3",
         "8.4"
     ],
-    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php{php}.zip",
+    "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php{php}.zip",
     "feed": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/releases.xml",
     "releases": [
         {
-            "version": "3.0.1",
+            "version": "3.1.1",
             "released": "2026-10-15",
             "notes": [
-                "Checkout: the numbers and seats options are now found however the product names them (\"Telephone Number(s)\", \"Phone Numbers\", \"Extensions/Users\" and the names in the settings all work), so the number picker and the minutes panel appear on products imported from Giant",
-                "Checkout: the \"Telephone Numbers (DIDs)\" box imported from Giant's product is hidden, since the picker fills the numbers in",
-                "Checkout: when numbers cannot be offered (no numbers option, or no area codes from the API) the page says so in its source and the activity log, instead of showing nothing",
-                "Billing and Leaks use the same option matching for the billed seats and numbers"
+                "Fixes the daily call collection, Reconcile and Leaks stopping on a wrong class name introduced in 3.1.0"
             ],
             "php": [
                 "7.4",
@@ -34,37 +28,37 @@
                 "8.3",
                 "8.4"
             ],
-            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php{php}.zip",
+            "download": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php{php}.zip",
             "files": [
                 {
                     "php": "7.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php7.4.zip",
-                    "size": 1758224,
-                    "sha256": "a573d3d72d2c33b3d47008b149a31a476348c4aa3ffae725cfe215b0e2ddcd40"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php7.4.zip",
+                    "size": 1778853,
+                    "sha256": "bae06a165616239818cc4b9dd65375e845f55cdc71747d31c304ecde5871fe76"
                 },
                 {
                     "php": "8.1",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.1.zip",
-                    "size": 1753400,
-                    "sha256": "ea2a8b925c81f40ffc963f88db86c79aa368d5e313ed12f6e432d90c5c352b00"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.1.zip",
+                    "size": 1772609,
+                    "sha256": "fb3f936f3f5d141614efc7ec355139953a599b93afd13f24397e4266239b070d"
                 },
                 {
                     "php": "8.2",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.2.zip",
-                    "size": 1755560,
-                    "sha256": "367b0d501c290f22f6d0ba79b797c4aab65dd2327e89b5fa98113e12739e98ea"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.2.zip",
+                    "size": 1773760,
+                    "sha256": "8ff6e043e8023e152e5a7d42876b3bbae48cdbc49d4da0f9e95ee9c58196de3f"
                 },
                 {
                     "php": "8.3",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.3.zip",
-                    "size": 1754044,
-                    "sha256": "58f1ee511862ecda43a1d4535369a85fa4b7324162efa219f99a90c013f9b104"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.3.zip",
+                    "size": 1771714,
+                    "sha256": "29f81b838688c2edb5bccf664b54ed8ebe11bae213d762c533db318860937039"
                 },
                 {
                     "php": "8.4",
-                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.0.1-php8.4.zip",
-                    "size": 1761882,
-                    "sha256": "7fdbace9ecf78c7940a5c75246ce16ecd2cc167b3bc5df04c11d3b0751d3f96b"
+                    "url": "https://portal.giant.net.uk/downloads/reseller-modules/resellervoip/resellervoip-3.1.1-php8.4.zip",
+                    "size": 1780113,
+                    "sha256": "411aacc62150eddef183b61fbe3ca7b128e2a7454d09df7624c1cd8c65bdb3b9"
                 }
             ]
         },
