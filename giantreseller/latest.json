@@ -1,0 +1,19 @@
+{
+    "module": "giantreseller",
+    "version": "2.0.0",
+    "released": "2026-10-15",
+    "notes": [
+        "One module for VoIP, broadband, mobile and UnifiedRPS on the Giant Reseller REST API v1",
+        "Dashboard with revenue, Giant cost and margin, charts and a needs-attention list",
+        "Reports with CSV downloads, and paying Giant invoices from WHMCS",
+        "Bulk import of Giant products, and of Giant services not yet in WHMCS",
+        "Setup guide in WHMCS and as a PDF",
+        "Daily check for new versions of the module"
+    ],
+    "php": [
+        "7.4",
+        "8.1",
+        "8.2"
+    ],
+    "download": "https://portal.giant.net.uk/downloads/giantreseller/giantreseller-2.0.0-php{php}.zip"
+}
