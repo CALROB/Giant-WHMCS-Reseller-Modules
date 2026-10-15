@@ -1,0 +1,27 @@
+# Giant reseller module downloads (served as /downloads/reseller-modules/).
+# Written by tools/build-release.php in Giant-WHMCS-Reseller-API-Module-Reseller-End-;
+# edit freely, it is not overwritten.
+
+Options -Indexes
+
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType application/zip .zip
+</IfModule>
+
+# Installed modules read giantreseller/latest.json to learn of new versions.
+<FilesMatch "\.(json|zip)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    <FilesMatch "^latest\.json$">
+        Header set Cache-Control "public, max-age=300"
+    </FilesMatch>
+</IfModule>
